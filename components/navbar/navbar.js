@@ -1,9 +1,12 @@
-const navbar = () => {
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+
+const Navbar = () => {
   return (
     <div>
-      header
+      Navbar
     </div>
   )
 }
 
-export default navbar;
+export default Navbar;

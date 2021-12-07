@@ -1,14 +1,21 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Layout from '../layout/layout';
+import About from '../components/about/about';
+import Projects from '../components/projects/projects';
+import Contact from '../components/contact/contact';
+import Intro from '../components/intro/intro';
 
 export default function Home() {
   return (
     <Layout
-      title="Manu Arora - Developer, Writer, Creator"
-      description="This is a template built specifically for my blog - Creating a developer portfolio that gets you a job."
+      title="Mark Phillips - Full Stack Software Developer"
+      description="This portfolio website was built to showcase previous projects and host my blog."
     >
-
+      <Intro />
+      <About />
+      <Projects />
+      <Contact />
     </Layout>
   )
 }
