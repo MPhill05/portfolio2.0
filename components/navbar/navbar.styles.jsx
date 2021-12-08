@@ -20,6 +20,13 @@ export const Wrapper = styled.div`
   padding: 1.25rem /* 20px */;
 `;
 
+export const HomeLogo = styled.li`
+  width: 168px;
+  font-size: large;
+  list-style: none;
+  font-weight: bold;
+`;
+
 export const NavContainer = styled.div`
   display: flex;
   align-items: flex-start;
