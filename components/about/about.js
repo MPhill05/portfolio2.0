@@ -16,14 +16,14 @@ const About = () => {
           />
         </div>
         <div className='w-1/2 mt-36 mr-auto col-span-1 md:col-span-2'>
-          <p className='text-xl justify-start space-x-4 text-gray-700 mb-4 dark:text-gray-300 md:text-center'>
+          <p className='text-xl justify-start space-x-4 text-gray-300 mb-4 dark:text-gray-300 md:text-center'>
             Hi! I'm Mark Phillips, a self-taught Full-Stack Web Developer proficient in JavaScript, various frameworks and libraries.
             <br />
             <br />
             I have experience working as a freelance developer, working directly with customers to create web applications with over 10,000 active users and consistently delivering quality work.
           </p>
           <button
-            className='mb-20 md:mb-0 px-8 py-2 text-3xl rounded-md shadow-lg font-semibold flex flex-row items-center bg-green-600 text-gray-50'>
+            className='mb-20 mt-20 ml-auto mr-auto md:mb-0 px-8 py-2 text-3xl rounded-md shadow-lg font-semibold flex flex-row items-center bg-green-600 text-gray-50'>
             Resume
             <Image
               src='/static/resume.svg'
