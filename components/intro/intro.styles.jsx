@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const IntroSection = styled.div`
   width: 60vw;
-  height: 80vh;
+  height: 60vh;
   position: relative;
   margin: auto;
 `;
@@ -19,6 +19,11 @@ export const LeftContent = styled.div`
   height: 100%;
   margin-top: 20vh;
   float: left;
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
 `;
 
 export const Typing = styled.h3`
@@ -27,7 +32,6 @@ export const Typing = styled.h3`
   overflow: hidden; 
   font-family: 'Source Code Pro', monospace;  
   font-size: 28px;
-  color: rgba(255,255,255,.70);
   position: relative;
 
   animation: animated-text 2s steps(30,end) 1s 1 normal both;
