@@ -28,10 +28,11 @@ const Intro = () => {
       <IntroContainer>
         <LeftContent>
           <h1>Mark Phillips</h1>
-          <Typing>Software Developer<TextCursor /></Typing>
+          <Typing className='text-gray-600'>Software Developer<TextCursor /></Typing>
           <br />
+          { }
           <ContactButton>
-            Contact Me <svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
+            Contact Me <svg xmlns="http://www.w3.org/2000/svg" className="contactSVG " fill="none" viewBox="0 0 22 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
             </svg>
           </ContactButton>
