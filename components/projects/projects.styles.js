@@ -1,12 +1,114 @@
 import styled from "styled-components";
 
+export const ProjectSection = styled.div`
+  ${'' /* height: 120vh; */}
+`;
+
 export const NumberSlide1 = styled.div`
-  background: rgb(64, 175, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 175, 255, 1) 0%,
-    rgba(63, 97, 255, 1) 100%
-  );
+  
+  .card {
+    color: #fff;
+    background-color: #111827;
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    margin: auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    transition: transform 500ms ease;
+  }
+
+  .card-content {
+    --padding: 5rem;
+    padding: var(--padding);
+    background: linear-gradient(
+      hsl(0 0% 0% / 0),
+      hsl(20 0% 0% / 0.3) 20%,
+      hsl(0 0% 0% / 1)
+    );
+  }
+
+  @media (hover) {
+    .card-content {
+      transform: translateY(60%);
+      transition: transform 500ms ease;
+    }
+
+    .card:hover .card-content,
+    .card:focus-within .card-content {
+      transform: translateY(0);
+      transition-delay: 500ms;
+    }
+
+    .card:focus-within .card-content {
+      transition-duration: 0ms;
+    }
+
+    .card-content > *:not(.card-title) {
+      opacity: 0;
+      transition: opacity 500ms linear;
+    }
+
+    .card:hover .card-content > *:not(.card-title),
+    .card:focus-within .card-content > *:not(.card-title) {
+      opacity: 1;
+      transition-delay: 1000ms;
+    }
+
+    .card-title::after {
+      transform: scaleX(0);
+    }
+  }
+
+  .card-title {
+    position: relative;
+    width: max-content;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: calc(var(--padding) * -1);
+      bottom: -2px;
+      height: 4px;
+      width: calc(100% + var(--padding));
+      background: #84E421;
+      transform-origin: left;
+      transition: transform 500ms ease;
+    }
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.05);
+  }
+
+  .card:hover .card-title::after,
+  .card:focus-within .card-title::after {
+    transform: scaleX(1);
+  }
+
+  .card-body {
+    color: rgb(255 255 255 / 0.5);
+    font-size: 30px;
+    padding-top: 2rem;
+  }
+
+  .projectBtn {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    background-color: #84E421;
+    padding: 0.005em 1em;
+    border-radius: 0.25em;
+    font-size: 34px;
+
+    &:hover,
+    &:focus {
+      background-color: none;
+    }
+  }
 `;
 
 export const NumberSlide2 = styled.div`
@@ -63,13 +165,38 @@ export const NavigationWrapper = styled.div`
   position: relative;
   width: 70vw;
   margin: auto;
+  padding-bottom: 2em;
+
+  .arrow {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit - transform: translateY(-50%);
+    fill: #fff;
+    cursor: pointer;
+  }
+
+  .arrow--left {
+    left: 5px;
+  }
+
+  .arrow--right {
+    left: auto;
+    right: 5px;
+  }
+
+  .arrow--disabled {
+    fill: rgba(255, 255, 255, 0.5);
+  }
 `;
 
 export const KeenSlider = styled.div`
   font-size: 50px;
   color: #fff;
   font-weight: 500;
-  height: 80vh;
+  height: 60vh;
   max-height: 100vh;
 `;
 
@@ -98,27 +225,22 @@ export const Dots = styled.div`
   }
 `;
 
+export const ProjectsContainer = styled.div`
+  
+`;
 
-// .arrow {
-//   width: 30px;
-//   height: 30px;
-//   position: absolute;
-//   top: 50 %;
-//   transform: translateY(-50 %);
-//   -webkit - transform: translateY(-50 %);
-//   fill: #fff;
-//   cursor: pointer;
-// }
+export const ProjectsHeading = styled.h1`
+  
+`;
 
-// .arrow--left {
-//   left: 5px;
-// }
+export const ProjectMenu = styled.div`
 
-// .arrow--right {
-//   left: auto;
-//   right: 5px;
-// }
+`;
 
-// .arrow--disabled {
-//   fill: rgba(255, 255, 255, 0.5);
-// }
+export const MenuItem = styled.div`
+  
+`;
+
+export const Img = styled.img`
+
+`;

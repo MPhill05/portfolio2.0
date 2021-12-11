@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const IntroSection = styled.div`
+  padding-top: 20vh;
   width: 60vw;
-  height: 60vh;
+  height: 80vh;
   position: relative;
   margin: auto;
 `;
@@ -15,10 +16,10 @@ export const IntroContainer = styled.div`
 `;
 
 export const LeftContent = styled.div`
-  width: 50%;
   height: 100%;
   margin-top: 20vh;
   float: left;
+  width: 20vw;
   
   h1 {
     font-size: 2rem;
@@ -26,10 +27,9 @@ export const LeftContent = styled.div`
   }
 `;
 
-export const Typing = styled.h3`
-  height: 40px;
+export const Typing = styled.div`
+  height: 35px;
   white-space: nowrap;
-  overflow: hidden; 
   font-family: 'Source Code Pro', monospace;  
   font-size: 28px;
   position: relative;
@@ -42,23 +42,26 @@ export const Typing = styled.h3`
   }
 `;
 
+export const SoftDevText = styled.h3`
+  overflow: hidden;
+`;
+
 export const TextCursor = styled.div`
-  border-bottom: solid 3px rgba(57, 255, 20, 1);
+  border-bottom: solid 3px rgba(0,255,0,.75);
   position: absolute;
-  right: -7px;
+  right: -10px;
   width: 20px;
 
   animation: animated-cursor 600ms steps(30,end) infinite;
 
-  @keyframes animated-cursor{
-    from{border-bottom-color: rgba(57, 255, 20, 1);}
-    to{border-bottom-color: transparent;}
+  @keyframes animated-cursor {
+    from {border-bottom-color: rgba(57, 255, 20, 1);}
+    to {border-bottom-color: transparent;}
   }
 `;
 
 export const ContactButton = styled.button`
   font-size: 1.4rem;
-  color: #000;
   display: inline;
   vertical-align: bottom;
   cursor: pointer;
@@ -98,16 +101,21 @@ export const ContactButton = styled.button`
     bottom: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 0 1em 0.5em rgba(57, 255, 20, 1);;
     opacity: 0;
     z-index: -1;
+    transition-delay: 0.5s;
+    transition: opacity 100ms  ease-in-out;
+    box-shadow: 0 1em 0.5em rgba(57, 255, 20, 1);;
     background-color: rgba(57, 255, 20, 1);
-    transition: opacity 100ms linear;
   }
 
   &:hover,
   &:focus {
-    color: hsl(323 21% 16%);
+    color: hsl(323 1% 16%);
+    background-color: rgba(57, 255, 20, 1);
+    box-shadow: 0 0 50px rgba(57, 255, 20, 1);
+    transition: 0.5s;
+  	transition-delay: 0.5s;
     text-shadow: none;
   }
 
@@ -116,6 +124,8 @@ export const ContactButton = styled.button`
   &:hover::after,
   &:focus::after {
     opacity: 1;
+    transition: ease-in;
+    transition-delay: 0.6s;
   }
 
   .contactSVG {
@@ -129,7 +139,8 @@ export const ContactButton = styled.button`
 `;
 
 export const RightContent = styled.div`
-  margin-top: 10vh
+  margin-top: 10vh;
+  padding-left: 150px;
 `;
 
 export const LearnMore = styled.div`

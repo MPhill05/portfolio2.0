@@ -3,10 +3,9 @@ import {
   ContactButton,
   IntroContainer,
   IntroSection,
-  LearnMore,
-  LearnMoreButton,
   LeftContent,
   RightContent,
+  SoftDevText,
   TextCursor,
   Typing
 } from "./intro.styles";
@@ -28,11 +27,11 @@ const Intro = () => {
       <IntroContainer>
         <LeftContent>
           <h1>Mark Phillips</h1>
-          <Typing className='text-gray-600'>Software Developer<TextCursor /></Typing>
+          <Typing><SoftDevText className='text-gray-600'>Software Developer</SoftDevText><TextCursor /></Typing>
           <br />
           { }
           <ContactButton>
-            Contact Me <svg xmlns="http://www.w3.org/2000/svg" className="contactSVG " fill="none" viewBox="0 0 22 24" stroke="currentColor">
+            Contact Me <svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
             </svg>
           </ContactButton>
@@ -40,20 +39,10 @@ const Intro = () => {
         <RightContent>
           <Lottie options={defaultOptions}
             height='50vh'
-            width='30vw'
+            width='40vw'
           />
         </RightContent>
       </IntroContainer>
-      <LearnMore>
-        <LearnMoreButton>
-          <Image
-            src='/static/arrow_downward.svg'
-            alt='Play Icon'
-            width='36px'
-            height='36px'
-          />
-        </LearnMoreButton>
-      </LearnMore>
     </IntroSection>
   )
 }

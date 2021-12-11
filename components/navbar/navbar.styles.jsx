@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
-  height: 80px;
-  ${'' /* margin-top: -280px; */}
-  display: flex;
-  justify-content: center;
+export const Nav = styled.div`
+  background: ${({ scrollNav }) => (scrollNav ? '#111827' : 'transparent')};
+  height: 120px;
+  margin-top: -280px;
   align-items: center;
   font-size: 1rem;
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: 0.5s all ease;
 `;
 
 export const Wrapper = styled.div`
@@ -18,6 +17,12 @@ export const Wrapper = styled.div`
   max-width: 1100px;  
   display: flex;
   padding: 1.25rem /* 20px */;
+`;
+
+export const NavLogo = styled.p`
+  font-weight: bold;
+  font-size: 1.3em;
+  cursor: pointer;
 `;
 
 export const NavContainer = styled.div`
