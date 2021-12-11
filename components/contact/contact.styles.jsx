@@ -4,7 +4,7 @@ export const ContactSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
   padding: 20px;
   width: 100%;
   background: #001923;
