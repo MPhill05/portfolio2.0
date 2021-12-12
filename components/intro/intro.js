@@ -9,6 +9,7 @@ import {
   TextCursor,
   Typing
 } from "./intro.styles";
+import { StyledButton } from '../../styles/styledbtn.styles';
 import Lottie from 'react-lottie';
 import * as animationData from '../../public/static/programming-computer.json';
 
@@ -27,14 +28,20 @@ const Intro = () => {
       <IntroContainer>
         <LeftContent>
           <h1>Mark Phillips</h1>
-          <Typing><SoftDevText className='text-gray-600'>Software Developer</SoftDevText><TextCursor /></Typing>
+          <Typing><SoftDevText className='text-gray-400'>Software Developer</SoftDevText><TextCursor /></Typing>
           <br />
           { }
-          <ContactButton>
-            Contact Me <svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
+          <StyledButton>
+            Contact Me&nbsp;
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="contactSVG w-5 h-4 inline mb-2"
+              fill="none"
+              viewBox="0 0 22 24"
+              stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
             </svg>
-          </ContactButton>
+          </StyledButton>
         </LeftContent>
         <RightContent>
           <Lottie options={defaultOptions}

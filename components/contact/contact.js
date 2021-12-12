@@ -3,9 +3,9 @@ import {
   ContactSection,
   FormCol,
   FormRow,
-  StyledButton,
   StyledForm,
 } from "./contact.styles";
+import { StyledButton } from "../../styles/styledbtn.styles";
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useRef, useState } from 'react';
 
@@ -66,9 +66,9 @@ const Contact = () => {
   };
 
   return (
-    <ContactSection>
+    <ContactSection id='aboutSection'>
       <ContactContainer className='container'>
-        <h2><svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
+        <h2 className='text-2xl'><svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
         </svg> Contact Me</h2>
         <StyledForm ref={form} onSubmit={handleSubmit}>

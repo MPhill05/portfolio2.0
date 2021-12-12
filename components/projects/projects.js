@@ -1,28 +1,28 @@
-import React, { useState } from "react"
-import { useKeenSlider } from "keen-slider/react"
+import Image from 'next/image';
+import React, { useState } from "react";
+import { useKeenSlider } from "keen-slider/react";
+import { StyledButton } from '../../styles/styledbtn.styles';
 import "keen-slider/keen-slider.min.css";
 import {
   Dots,
   KeenSlider,
   NavigationWrapper,
-  NumberSlide1,
-  NumberSlide2,
-  NumberSlide3,
-  NumberSlide4,
-  NumberSlide5,
-  NumberSlide6,
+  NumberSlider,
   ProjectSection
 } from "./projects.styles";
 import myProjects from '../../data/projectData';
-import {
-  projectName
-} from '../../data/projectData'
 
 const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
+  const [slides, setSlides] = useState([1])
+  const numberSlides = myProjects.projects.length;
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
+    slides: {
+      perView: 1,
+      number: numberSlides,
+    },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
     },
@@ -32,7 +32,7 @@ const Projects = () => {
   })
 
   return (
-    <ProjectSection>
+    <ProjectSection id='projectSection'>
       <section className='bg-white dark:bg-gray-800 z-50'>
         <div className='max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800'>
           <h1 className='text-5xl md:text-9xl font-bold py-20 text-center md:text-right'>
@@ -41,20 +41,27 @@ const Projects = () => {
         </div>
         <NavigationWrapper className="navigation-wrapper flex">
           <KeenSlider ref={sliderRef} className="keen-slider">
-            <NumberSlide1 className="keen-slider__slide number-slide1">
-              <div class='card'>
-                <div className="card-content">
-                  <h2 className='card-title'>Project Name</h2>
-                  <p className='card-body'>Project Details Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                  <a href='#' className='projectBtn'>View More</a>
-                </div>
-              </div>
-            </NumberSlide1>
-            <NumberSlide2 className="keen-slider__slide number-slide2">2</NumberSlide2>
-            <NumberSlide3 className="keen-slider__slide number-slide3">3</NumberSlide3>
-            <NumberSlide4 className="keen-slider__slide number-slide4">4</NumberSlide4>
-            <NumberSlide5 className="keen-slider__slide number-slide5">5</NumberSlide5>
-            <NumberSlide6 className="keen-slider__slide number-slide6">6</NumberSlide6>
+            {myProjects.projects.map((project) => {
+              return (
+                <NumberSlider
+                  key={project.id}
+                  className={"keen-slider__slide"}
+                >
+                  <div className='card'>
+                    <img className='backgroundImage' src={project.img} />
+                    <div className="card-content">
+                      <h2 className='card-title'>{project.projectName}</h2>
+                      <p className='card-body'>{project.projectType}</p>
+                      <StyledButton href='#' className='projectBtn'>View More&nbsp;
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </StyledButton>
+                    </div>
+                  </div>
+                </NumberSlider>
+              )
+            })}
           </KeenSlider>
           {loaded && instanceRef.current && (
             <>

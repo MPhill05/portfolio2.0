@@ -55,16 +55,16 @@ const Navbar = () => {
             </Link>
             <NavContainer>
               <NavItems>
-                <About href='/'>
+                <About href='/' className='navItem'>
                   About
                 </About>
-                <Projects href='/'>
+                <Projects href='/' className='navItem'>
                   Projects
                 </Projects>
-                <Contact href='/'>
+                <Contact href='/' className='navItem'>
                   Contact
                 </Contact>
-                <Blog href='/blog'>
+                <Blog href='/blog' className='navItem'>
                   Blog
                 </Blog>
               </NavItems>
@@ -76,7 +76,7 @@ const Navbar = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label='Github'
-                  className="text-base font-normal text-gray-400 dark:text-gray-300"
+                  className="text-base font-normal text-gray-400 dark:text-gray-300 ghIcon"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ const Navbar = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label='LinkedIn'
-                  className="text-base font-normal text-gray-400 dark:text-gray-300"
+                  className="text-base font-normal text-gray-400 dark:text-gray-300 liIcon"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@ const Navbar = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label='Twitter'
-                  className="text-base font-normal text-gray-400 dark:text-gray-300"
+                  className="text-base font-normal text-gray-400 dark:text-gray-300 twIcon"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

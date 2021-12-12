@@ -2,21 +2,29 @@ import styled from "styled-components";
 
 export const ProjectSection = styled.div`
   ${'' /* height: 120vh; */}
+  width: 80%;
+  margin: auto;
 `;
 
-export const NumberSlide1 = styled.div`
+export const NumberSlider = styled.div`
   
   .card {
     color: #fff;
     background-color: #111827;
     background-size: cover;
     padding: 10rem 0 0;
-    max-width: 35ch;
+    width: 70%;
     margin: auto;
     border-radius: 0.5rem;
     overflow: hidden;
 
     transition: transform 500ms ease;
+  }
+
+  .backgroundImage {
+    height: 100%;
+    position: relative;
+    background-size: cover;
   }
 
   .card-content {
@@ -95,70 +103,10 @@ export const NumberSlide1 = styled.div`
   }
 
   .projectBtn {
-    cursor: pointer;
-    display: inline-block;
+    display: inline;
     text-decoration: none;
-    color: #000;
-    background-color: #84E421;
-    padding: 0.005em 1em;
-    border-radius: 0.25em;
-    font-size: 34px;
-
-    &:hover,
-    &:focus {
-      background-color: none;
-    }
+    font-size: 20px;
   }
-`;
-
-export const NumberSlide2 = styled.div`
-  background: rgb(255, 75, 64);
-  background: linear-gradient(
-    128deg,
-    rgba(255, 154, 63, 1) 0%,
-    rgba(255, 75, 64, 1) 100%
-  );
-`;
-
-export const NumberSlide3 = styled.div`
-  background: rgb(182, 255, 64);
-  background: linear-gradient(
-    128deg,
-    rgba(182, 255, 64, 1) 0%,
-    rgba(63, 255, 71, 1) 100%
-  );
-  background: linear-gradient(
-    128deg,
-    rgba(189, 255, 83, 1) 0%,
-    rgba(43, 250, 82, 1) 100%
-  );
-`;
-
-export const NumberSlide4 = styled.div`
-  background: rgb(64, 255, 242);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 255, 242, 1) 0%,
-    rgba(63, 188, 255, 1) 100%
-  );
-`;
-
-export const NumberSlide5 = styled.div`
-  background: rgb(255, 64, 156);
-  background: linear-gradient(
-    128deg,
-    rgba(255, 64, 156, 1) 0%,
-    rgba(255, 63, 63, 1) 100%
-  );
-`;
-
-export const NumberSlide6 = styled.div`
-  background: rgb(64, 76, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 76, 255, 1) 0%,
-    rgba(174, 63, 255, 1) 100%
-  );
 `;
 
 export const NavigationWrapper = styled.div`
@@ -221,7 +169,7 @@ export const Dots = styled.div`
   }
 
   .dot.active {
-    background: #000;
+    background: #39FF14;
   }
 `;
 

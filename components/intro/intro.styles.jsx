@@ -25,6 +25,10 @@ export const LeftContent = styled.div`
     font-size: 2rem;
     font-weight: bold;
   }
+
+ .contactSVG {
+    transform: rotate(45deg);
+  }
 `;
 
 export const Typing = styled.div`
@@ -57,84 +61,6 @@ export const TextCursor = styled.div`
   @keyframes animated-cursor {
     from {border-bottom-color: rgba(57, 255, 20, 1);}
     to {border-bottom-color: transparent;}
-  }
-`;
-
-export const ContactButton = styled.button`
-  font-size: 1.4rem;
-  display: inline;
-  vertical-align: bottom;
-  cursor: pointer;
-  text-decoration: none;
-  color: rgba(57, 255, 20, 1);
-  border: rgba(57, 255, 20, 1) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  position: relative;
-
-  text-shadow: 
-    0 0 0.125em hsl(0 0% 100% / 0.3),
-    0 0 0.45em rgba(57, 255, 20, 1);
-
-  box-shadow: inset 0 0 0.5em 0 rgba(57, 255, 20, 1),
-    0 0 0.5em 0 rgba(57, 255, 20, 1);
-
-  &::before {
-    pointer-events: none;
-    content: '';
-    position: absolute;
-    background: rgba(57, 255, 20, 1);
-    top: 120%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1em);
-    opacity: 0.7;
-  }
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    z-index: -1;
-    transition-delay: 0.5s;
-    transition: opacity 100ms  ease-in-out;
-    box-shadow: 0 1em 0.5em rgba(57, 255, 20, 1);;
-    background-color: rgba(57, 255, 20, 1);
-  }
-
-  &:hover,
-  &:focus {
-    color: hsl(323 1% 16%);
-    background-color: rgba(57, 255, 20, 1);
-    box-shadow: 0 0 50px rgba(57, 255, 20, 1);
-    transition: 0.5s;
-  	transition-delay: 0.5s;
-    text-shadow: none;
-  }
-
-  &:hover::before,
-  &:focus::before,
-  &:hover::after,
-  &:focus::after {
-    opacity: 1;
-    transition: ease-in;
-    transition-delay: 0.6s;
-  }
-
-  .contactSVG {
-    width: 1.2em;
-    margin-bottom: 10px;
-    height: 1em;
-    transform: rotate(45deg);
-    display: inline;
-    align-self: center;
   }
 `;
 
