@@ -1,6 +1,6 @@
 ## Portfolio Website with NextJS
 
-<img width="1440" alt="portfolio2.0" src="https://user-images.githubusercontent.com/9022851/145732347-fd4f3865-978c-4f98-86c9-68bd14d82eb2.png">
+<img width="1440" alt="portfolio2.0" src=https://user-images.githubusercontent.com/9022851/145732444-19b6f207-352b-4954-a136-58e5d61970e0.png>
 
 # Tech Stack
 
