@@ -1,5 +1,7 @@
 ## Portfolio Website with NextJS
 
+<img width="1440" alt="portfolio2.0" src="">
+
 # Tech Stack
 
 The website is built with the following Tech Stack
