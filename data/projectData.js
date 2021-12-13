@@ -1,11 +1,11 @@
-import blkGoldArt from '../public/static/blkgoldLogo.webp';
-import blkGoldSiteImg from '../public/static/blkGoldSiteImg.webp';
-import phillstackArt from '../public/static/psLogoBlack.webp';
-import phillstackSiteImg from '../public/static/psSiteImg.webp';
-import bmbxctrlArt from '../public/static/bmbxCtrlLogo.webp';
-import bmbxctrlSiteImg from '../public/static/bmbxCtrlSiteImg.webp';
-import shopjwArt from '../public/static/shopJWLogo.webp';
-import shopjwSiteImg from '../public/static/shopJWSiteImg.webp';
+// import blkGoldArt from '/static/blkgoldLogo.webp';
+// import blkGoldSiteImg from '/static/blkGoldSiteImg.webp';
+// import phillstackArt from '/static/psLogoBlack.webp';
+// import phillstackSiteImg from '/static/psSiteImg.webp';
+// import bmbxctrlArt from '/static/bmbxCtrlLogo.webp';
+// import bmbxctrlSiteImg from '/static/bmbxCtrlSiteImg.webp';
+// import shopjwArt from '/static/shopJWLogo.webp';
+// import shopjwSiteImg from '/static/shopJWSiteImg.webp';
 
 export const myProjects = {
   projects: [
@@ -13,9 +13,9 @@ export const myProjects = {
       id: 4,
       projectName: 'BlkGold',
       projectType: 'React Web App',
-      img: blkGoldArt,
+      img: '/static/bgLogo.webp',
       alt: 'BlkGold',
-      modalImg: blkGoldSiteImg,
+      modalImg: '/static/blkGoldSiteImg.webp',
       techStack: 'ReactJS | Sass | Bootstrap | HTML | CSS CircleCi | AWS ',
       challenge: `Challenge: Outside of coding I enjoy creating music for fun, and wanted a centralized location for fans to find my music. `,
       solution: 'Solution: Blkgoldmusic.com is a simple web application that allows users to quickly find my music, videos, and any related information to the project. It shows fans my most recent releases on the home page along with all applicable social media links, and a contact form to stay up to date with me via email. The responsive web app was built with Sass and Bootstrap for a smooth responsive design, complete with some simple React routing and modals to easily show applicable information.',
@@ -27,9 +27,9 @@ export const myProjects = {
       id: 3,
       projectName: 'Phillstack',
       projectType: 'React Web App',
-      img: phillstackArt,
+      img: '/static/psLogoBlack.webp',
       alt: 'Phillstack',
-      modalImg: phillstackSiteImg,
+      modalImg: '/static/psSiteImg.webp',
       techStack: 'ReactJS | Sass | Bootstrap | HTML | CSS | CircleCi | AWS | Jira',
       challenge: 'Challenge: My brother and I were in need of a site to operate as a landing page for freelance clients and to showcase work that we\'ve previously worked on. This site needed to be simple and easy for nontechnical people to be able to see our work, what we\'re about and get in contact with us.',
       solution: 'Solution: A simple, straightforward design making it easy for anyone to find us and what we do. The page is straight forward and minimal.',
@@ -41,9 +41,9 @@ export const myProjects = {
       id: 2,
       projectName: 'Boombox Cartel',
       projectType: 'Angular Web App',
-      img: bmbxctrlArt,
+      img: '/static/bmbxCtrlLogo.webp',
       alt: 'Boombox Cartel',
-      modalImg: bmbxctrlSiteImg,
+      modalImg: '/static/bmbxCtrlSiteImg.webp',
       techStack: 'Angular | Sass | Bootstrap | HTML | CSS',
       challenge: 'Challenge: The original site was broken and extremely dated, I was approached to help improve their web presence and give the artist a homebase to work from. We needed something that was new, creative, showcased the artists talents, and felt engaging to fans without going overboard. I needed to be able to show images and videos without costing the user too much, and use custom graphics with abnormal placement to achieve the vision the artists and his designer eventually landed on.',
       solution: 'Solution: A complete site redesign from the ground up working closely with the artist and his graphic designer. This is a page achieves the visions they set without being too taxing on the end user. Everything is made with custom icons and fonts, a custom sliding drawer in the bottom for socials and subscribe via email, and gives users what they need in regards to tour dates and the store.',
@@ -55,9 +55,9 @@ export const myProjects = {
       id: 1,
       projectName: 'Shop J&W',
       projectType: 'E-Commerce Website',
-      img: shopjwArt,
+      img: '/static/shopJWLogo.webp',
       alt: 'Shop J&W',
-      modalImg: shopjwSiteImg,
+      modalImg: '/static/shopJWSiteImg.webp',
       techStack: 'Wordpress | Bigcommerce',
       challenge: 'Challenge: The client needed to upgrade their existing WordPress site that was broken due to plugins not being updated. The client was hosting their products with Bigcommerce and transfering their data to WordPress.',
       solution: 'Solution: The site was migrated over from WordPress to Bigcommerce for the front-end and setup with a custom theme. ',

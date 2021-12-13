@@ -7,13 +7,11 @@ export const ProjectSection = styled.div`
 `;
 
 export const NumberSlider = styled.div`
-  
   .card {
     color: #fff;
     background-color: #111827;
-    background-size: cover;
     padding: 10rem 0 0;
-    width: 70%;
+    width: 50%;
     margin: auto;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -22,7 +20,9 @@ export const NumberSlider = styled.div`
   }
 
   .backgroundImage {
-    height: 100%;
+    height: 150px;
+    width: 50%;
+    margin: auto;
     position: relative;
     background-size: cover;
   }
