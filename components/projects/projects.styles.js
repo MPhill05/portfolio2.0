@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectSection = styled.div`
-  height: 1000px;
+  min-height: 100vh;
   width: 80%;
   margin: auto;
 `;
@@ -20,7 +20,6 @@ export const NumberSlider = styled.div`
   }
 
   .backgroundImage {
-    height: 150px;
     width: 75%;
     margin: auto;
     position: relative;
