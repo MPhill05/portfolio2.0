@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const IntroSection = styled.div`
-  padding-top: 20vh;
+  padding-top: 30vh;
   width: 60vw;
-  height: 80vh;
+  height: 90vh;
   position: relative;
   margin: auto;
 `;

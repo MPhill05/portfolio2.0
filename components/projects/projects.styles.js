@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectSection = styled.div`
-  height: 1050px;
+  height: 1000px;
   width: 80%;
   margin: auto;
 `;
@@ -11,11 +11,10 @@ export const NumberSlider = styled.div`
     color: #fff;
     background-color: #111827;
     padding: 10rem 0 0;
-    width: 50%;
-    height: 700px;
+    max-width: 20ch;
     margin: auto;
     border-radius: 0.5rem;
-    overflow: hidden;
+    ${'' /* overflow: hidden; */}
 
     transition: transform 500ms ease;
   }
@@ -173,24 +172,4 @@ export const Dots = styled.div`
   .dot.active {
     background: #39FF14;
   }
-`;
-
-export const ProjectsContainer = styled.div`
-  
-`;
-
-export const ProjectsHeading = styled.h1`
-  
-`;
-
-export const ProjectMenu = styled.div`
-
-`;
-
-export const MenuItem = styled.div`
-  
-`;
-
-export const Img = styled.img`
-
 `;
