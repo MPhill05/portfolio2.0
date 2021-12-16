@@ -66,7 +66,7 @@ const Contact = () => {
   };
 
   return (
-    <ContactSection id='aboutSection'>
+    <ContactSection id='contact'>
       <ContactContainer className='container'>
         <h2 className='text-2xl'><svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
