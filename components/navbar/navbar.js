@@ -50,21 +50,46 @@ const Navbar = () => {
       <Nav scrollNav={scrollNav}>
         <div className='max-w-6xl mx-auto px-4 py-5 md:py-5'>
           <Wrapper className='flex md:flex-row justify-between items-center'>
-            <Link href='/' onClick={handleOnClickHome}>
+            <Link
+              href='/'
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleOnClickHome}
+            >
               <NavLogo>Mark Phillips</NavLogo>
             </Link>
             <NavContainer>
               <NavItems>
-                <About href='/' className='navItem'>
+                <Link
+                  href='/#about'
+                  className='navItem'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   About
-                </About>
-                <Projects href='/' className='navItem'>
+                </Link>
+                <Link
+                  href='/#projects'
+                  className='navItem'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Projects
-                </Projects>
-                <Contact href='/' className='navItem'>
+                </Link>
+                <Link
+                  href='/#contact'
+                  className='navItem'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Contact
-                </Contact>
-                <Blog href='/blog' className='navItem'>
+                </Link>
+                <Blog
+                  href='/blog'
+                  className='navItem'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Blog
                 </Blog>
               </NavItems>

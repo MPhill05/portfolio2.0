@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectSection = styled.div`
-  ${'' /* height: 120vh; */}
+  height: 1050px;
   width: 80%;
   margin: auto;
 `;
@@ -12,6 +12,7 @@ export const NumberSlider = styled.div`
     background-color: #111827;
     padding: 10rem 0 0;
     width: 50%;
+    height: 700px;
     margin: auto;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -21,7 +22,7 @@ export const NumberSlider = styled.div`
 
   .backgroundImage {
     height: 150px;
-    width: 50%;
+    width: 75%;
     margin: auto;
     position: relative;
     background-size: cover;
@@ -114,6 +115,7 @@ export const NavigationWrapper = styled.div`
   width: 70vw;
   margin: auto;
   padding-bottom: 2em;
+  height: 750px;
 
   .arrow {
     width: 30px;

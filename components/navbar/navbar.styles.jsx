@@ -80,6 +80,11 @@ export const NavContainer = styled.div`
 export const NavItems = styled.ul`
   display: flex;
   flex-direction: row;
+  
+  a {
+    cursor: pointer;
+    margin: 0 1em;
+  }
 
   .navItem {
     -webkit-transition: all 1s ease-out;
@@ -95,21 +100,6 @@ export const NavItems = styled.ul`
       transform: scale(1.1);
     }
   }
-`;
-
-export const About = styled.li`
-  cursor: pointer;
-  margin: 0 1em;
-`;
-
-export const Projects = styled.li`
-  cursor: pointer;
-  margin: 0 1em;
-`;
-
-export const Contact = styled.li`
-  cursor: pointer;
-  margin: 0 1em;
 `;
 
 export const Blog = styled.li`

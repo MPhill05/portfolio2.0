@@ -32,7 +32,7 @@ const Projects = () => {
   })
 
   return (
-    <ProjectSection id='projectSection'>
+    <ProjectSection id='projects'>
       <section className='bg-white dark:bg-gray-800 z-50'>
         <div className='max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800'>
           <h1 className='text-5xl md:text-9xl font-bold py-20 text-center md:text-right'>
@@ -53,7 +53,7 @@ const Projects = () => {
                       <h2 className='card-title'>{project.projectName}</h2>
                       <p className='card-body'>{project.projectType}</p>
                       <StyledButton href='#' className='projectBtn'>View More&nbsp;
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                       </StyledButton>
