@@ -4,7 +4,7 @@ export const ContactSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  min-height: 90vh;
   padding: 20px;
   width: 100%;
   background: #001923;
@@ -12,30 +12,30 @@ export const ContactSection = styled.div`
   &::before {
     content: '';
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     background: linear-gradient(#ffeb3b, #e91e63);
     border-radius: 50%;
-    transform: translate(-420px, -180px);
+    transform: translate(-420px, -100px);
   }
 
   &::after {
     content: '';
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     background: linear-gradient(#2196f3, #83d8ff);
     border-radius: 50%;
-    transform: translate(400px, 180px);
+    transform: translate(400px, 50px);
   }
 
   @media (max-width: 767px) {
     &::before {
-      transform: translate(-200px, -180px);
+      transform: translate(-100px, -180px);
     }
 
     &::after {
-      transform: translate(220px, 180px);
+      transform: translate(120px, 100px);
     }
   }
 `;

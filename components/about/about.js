@@ -9,7 +9,7 @@ const About = () => {
           About Me
         </h1>
       </div>
-      <div className='flex flex-row flex-wrap bg-gray-800 -mt-10 dark:bg-gray-900'>
+      <div className='flex flex-row flex-wrap pb-20 bg-gray-800 -mt-10 dark:bg-gray-900'>
         <div className='w-1/4 mt-8 ml-auto'>
           <img
             src='/static/laptop.webp'
