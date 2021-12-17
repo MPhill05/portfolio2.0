@@ -45,10 +45,14 @@ const Navbar = () => {
     window.addEventListener('scroll', changeNav)
   }, []);
 
+  const toggleHome = () => {
+    scroll.scrollToTop()
+  }
+
   return (
     <IconContext.Provider value={{ color: '#fff' }}>
       <Nav scrollNav={scrollNav}>
-        <div className='max-w-6xl mx-auto px-4 py-5 md:py-5'>
+        <div className='max-w-6xl mx-auto px-4 py-5 md:py-5 z-50'>
           <Wrapper className='flex md:flex-row justify-between items-center'>
             <Link
               href='/'
@@ -56,7 +60,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               onClick={handleOnClickHome}
             >
-              <NavLogo>Mark Phillips</NavLogo>
+              <NavLogo onClick={toggleHome}>Mark Phillips</NavLogo>
             </Link>
             <NavContainer>
               <NavItems>

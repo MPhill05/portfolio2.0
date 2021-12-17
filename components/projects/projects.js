@@ -47,13 +47,25 @@ const Projects = () => {
                   key={project.id}
                   className={"keen-slider__slide"}
                 >
-                  <div className='card'>
+                  {/* <div className='rounded-lg shadow-2xl dark:bg-gray-900 w-3/4 m-auto'>
+
+                    <div className='bg-gray-100 rounded-t-lg py-5 px-8 text-xl font-extrabold'>Header</div>
+                    <div className='p-8 text-center'>
+                      <p>This is a card</p>
+
+                      <button className='bg-blue-400 text-blue-50 rounded-l py-2 px-4 mt-5'>Get Started</button>
+                      <div>
+                        <footer className="bg-gray-100 rounded-b-lg text-right py-3 px-8 text-xs text-gray-500">Updated 3 days ago</footer>
+                      </div>
+                    </div>
+                  </div> */}
+                  <div className='rounded-lg shadow-2xl w-1/2 card'>
                     <img className='backgroundImage' src={project.img} />
                     <div className="card-content">
                       <h2 className='card-title'>{project.projectName}</h2>
                       <p className='card-body'>{project.projectType}</p>
                       <StyledButton href='#' className='projectBtn'>View More&nbsp;
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                       </StyledButton>

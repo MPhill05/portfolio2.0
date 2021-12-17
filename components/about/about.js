@@ -4,7 +4,7 @@ import { StyledButton } from '../../styles/styledbtn.styles';
 const About = () => {
   return (
     <section className='bg-white dark:bg-gray-800' id='about'>
-      <div className='max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800'>
+      <div className='max-w-6xl mx-auto h-48 pb-10 bg-white dark:bg-gray-800'>
         <h1 className='text-5xl md:text-9xl font-bold py-20 text-center md:text-left'>
           About Me
         </h1>
@@ -24,7 +24,7 @@ const About = () => {
             I have experience working as a freelance developer, working directly with customers to create web applications with over 10,000 active users and consistently delivering quality work.
           </p>
           <StyledButton
-            className='mb-20 mt-20 ml-auto mr-auto md:mb-0 px-8 py-2 text-3xl flex flex-row items-center'>
+            className='mb-20 mt-20 m-auto md:mb-0 px-8 py-2 text-3xl flex flex-row items-center'>
             Resume&nbsp;
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />

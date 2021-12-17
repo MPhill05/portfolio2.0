@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectSection = styled.div`
-  min-height: 100vh;
+  min-height: 80vh;
   width: 80%;
   margin: auto;
 `;
@@ -14,13 +14,13 @@ export const NumberSlider = styled.div`
     max-width: 20ch;
     margin: auto;
     border-radius: 0.5rem;
-    ${'' /* overflow: hidden; */}
+    overflow: hidden;
 
     transition: transform 500ms ease;
   }
 
   .backgroundImage {
-    width: 75%;
+    width: 50%;
     margin: auto;
     position: relative;
     background-size: cover;
@@ -113,7 +113,7 @@ export const NavigationWrapper = styled.div`
   width: 70vw;
   margin: auto;
   padding-bottom: 2em;
-  height: 750px;
+  ${'' /* height: 750px; */}
 
   .arrow {
     width: 30px;
@@ -144,8 +144,8 @@ export const KeenSlider = styled.div`
   font-size: 50px;
   color: #fff;
   font-weight: 500;
-  height: 60vh;
-  max-height: 100vh;
+  ${'' /* height: 100vh;
+  max-height: 100vh; */}
 `;
 
 export const Dots = styled.div`

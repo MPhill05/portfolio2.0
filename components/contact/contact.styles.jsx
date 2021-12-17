@@ -42,7 +42,7 @@ export const ContactSection = styled.div`
 
 export const ContactContainer = styled.div`
   position: relative;
-  z-index: 10;
+  z-index: 5;
   width: 100%;
   max-width: 700px;
   padding: 50px;
