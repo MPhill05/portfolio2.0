@@ -47,18 +47,6 @@ const Projects = () => {
                   key={project.id}
                   className={"keen-slider__slide"}
                 >
-                  {/* <div className='rounded-lg shadow-2xl dark:bg-gray-900 w-3/4 m-auto'>
-
-                    <div className='bg-gray-100 rounded-t-lg py-5 px-8 text-xl font-extrabold'>Header</div>
-                    <div className='p-8 text-center'>
-                      <p>This is a card</p>
-
-                      <button className='bg-blue-400 text-blue-50 rounded-l py-2 px-4 mt-5'>Get Started</button>
-                      <div>
-                        <footer className="bg-gray-100 rounded-b-lg text-right py-3 px-8 text-xs text-gray-500">Updated 3 days ago</footer>
-                      </div>
-                    </div>
-                  </div> */}
                   <div className='rounded-lg shadow-2xl w-1/2 card'>
                     <img className='backgroundImage' src={project.img} />
                     <div className="card-content">

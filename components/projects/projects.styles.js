@@ -144,8 +144,6 @@ export const KeenSlider = styled.div`
   font-size: 50px;
   color: #fff;
   font-weight: 500;
-  ${'' /* height: 100vh;
-  max-height: 100vh; */}
 `;
 
 export const Dots = styled.div`
