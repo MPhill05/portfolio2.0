@@ -1,12 +1,3 @@
-// import blkGoldArt from '/static/blkgoldLogo.webp';
-// import blkGoldSiteImg from '/static/blkGoldSiteImg.webp';
-// import phillstackArt from '/static/psLogoBlack.webp';
-// import phillstackSiteImg from '/static/psSiteImg.webp';
-// import bmbxctrlArt from '/static/bmbxCtrlLogo.webp';
-// import bmbxctrlSiteImg from '/static/bmbxCtrlSiteImg.webp';
-// import shopjwArt from '/static/shopJWLogo.webp';
-// import shopjwSiteImg from '/static/shopJWSiteImg.webp';
-
 export const myProjects = {
   projects: [
     {
@@ -53,7 +44,7 @@ export const myProjects = {
     },
     {
       id: 1,
-      projectName: 'Shop J&W',
+      projectName: 'Shop J\&W',
       projectType: 'E-Commerce Website',
       img: '/static/shopJWLogo.webp',
       alt: 'Shop J&W',

@@ -1,7 +1,13 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 import React, { useState } from "react";
-import { useKeenSlider } from "keen-slider/react";
+import Modal from 'react-modal';
+
 import { StyledButton } from '../../styles/styledbtn.styles';
+
+import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import {
   Dots,
@@ -10,6 +16,7 @@ import {
   NumberSlider,
   ProjectSection
 } from "./projects.styles";
+
 import myProjects from '../../data/projectData';
 
 const Projects = () => {
@@ -30,6 +37,12 @@ const Projects = () => {
       setLoaded(true)
     },
   })
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    router.push(`modal/${id}`);
+  }
 
   return (
     <ProjectSection id='projects'>
@@ -41,10 +54,11 @@ const Projects = () => {
         </div>
         <NavigationWrapper className="navigation-wrapper flex">
           <KeenSlider ref={sliderRef} className="keen-slider">
-            {myProjects.projects.map((project) => {
+            {myProjects.projects.map((project, idx) => {
+              console.log(project, idx)
               return (
                 <NumberSlider
-                  key={project.id}
+                  key={idx}
                   className={"keen-slider__slide"}
                 >
                   <div className='rounded-lg shadow-2xl w-1/2 card'>
@@ -52,11 +66,13 @@ const Projects = () => {
                     <div className="card-content">
                       <h2 className='card-title'>{project.projectName}</h2>
                       <p className='card-body'>{project.projectType}</p>
-                      <StyledButton href='#' className='projectBtn'>View More&nbsp;
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                      </StyledButton>
+                      <Link href={`/modal/${project.projectName}`}>
+                        <StyledButton href={project} className='projectBtn'>View More&nbsp;
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
+                        </StyledButton>
+                      </Link>
                     </div>
                   </div>
                 </NumberSlider>
