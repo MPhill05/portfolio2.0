@@ -31,17 +31,19 @@ const Intro = () => {
           <Typing><SoftDevText className='text-gray-400'>Software Developer</SoftDevText><TextCursor /></Typing>
           <br />
           { }
-          <StyledButton>
-            Contact Me&nbsp;
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="contactSVG w-5 h-4 inline mb-2"
-              fill="none"
-              viewBox="0 0 22 24"
-              stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-            </svg>
-          </StyledButton>
+          <a href='/#contact'>
+            <StyledButton>
+              Contact Me&nbsp;
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="contactSVG w-5 h-4 inline mb-2"
+                fill="none"
+                viewBox="0 0 22 24"
+                stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </StyledButton>
+          </a>
         </LeftContent>
         <RightContent>
           <Lottie options={defaultOptions}

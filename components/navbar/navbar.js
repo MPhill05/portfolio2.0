@@ -6,14 +6,11 @@ import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll } from 'react-scroll';
 import './navbar.styles';
 import {
-  About,
-  Blog,
-  Contact,
   Nav,
   NavContainer,
   NavItems,
+  NavLinks,
   NavLogo,
-  Projects,
   Wrapper
 } from './navbar.styles';
 
@@ -64,30 +61,39 @@ const Navbar = () => {
             </Link>
             <NavContainer>
               <NavItems>
-                <Link
-                  href='/#about'
+                <NavLinks
+                  to='about'
                   className='navItem'
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  smooth={true}
+                  duration={500}
+                  exact='true'
+                  offset={-80}
+                  spy={true}
                 >
                   About
-                </Link>
-                <Link
-                  href='/#projects'
+                </NavLinks>
+                <NavLinks
+                  to='projects'
                   className='navItem'
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  smooth={true}
+                  duration={500}
+                  exact='true'
+                  offset={-80}
+                  spy={true}
                 >
                   Projects
-                </Link>
-                <Link
-                  href='/#contact'
+                </NavLinks>
+                <NavLinks
+                  to='contact'
                   className='navItem'
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  smooth={true}
+                  duration={500}
+                  exact='true'
+                  offset={-80}
+                  spy={true}
                 >
                   Contact
-                </Link>
+                </NavLinks>
                 <Link
                   href='/blog'
                   className='navItem'
