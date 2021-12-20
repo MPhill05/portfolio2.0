@@ -88,14 +88,14 @@ const Navbar = () => {
                 >
                   Contact
                 </Link>
-                <Blog
+                <Link
                   href='/blog'
                   className='navItem'
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Blog
-                </Blog>
+                </Link>
               </NavItems>
             </NavContainer>
             <div>
