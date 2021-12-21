@@ -122,7 +122,7 @@ export const NavigationWrapper = styled.div`
     top: 50%;
     transform: translateY(-50%);
     -webkit - transform: translateY(-50%);
-    fill: #fff;
+    fill: #01BF71;
     cursor: pointer;
   }
 

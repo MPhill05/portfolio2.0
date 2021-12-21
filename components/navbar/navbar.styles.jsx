@@ -88,14 +88,15 @@ export const NavItems = styled.ul`
   }
 
   .navItem {
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    -ms-transition: all 1s ease-out;
-    transition: all 1s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    transition-delay: 0.3s;
 
     &:hover {
-      transition: 0.1s;
+      ${'' /* transition: 0.1s; */}
       ${'' /* transition-delay: 0.1s; */}
       transform: scale(1.1);
     }

@@ -70,7 +70,7 @@ const Navbar = () => {
                   offset={-80}
                   spy={true}
                 >
-                  <p className='text-gray-500'>About</p>
+                  <p className=''>About</p>
                 </NavLinks>
                 <NavLinks
                   to='projects'
@@ -81,7 +81,7 @@ const Navbar = () => {
                   offset={-80}
                   spy={true}
                 >
-                  <p className='text-gray-500'>Projects</p>
+                  <p className=''>Projects</p>
                 </NavLinks>
                 <NavLinks
                   to='contact'
@@ -92,7 +92,7 @@ const Navbar = () => {
                   offset={-80}
                   spy={true}
                 >
-                  <p className='text-gray-500'>Contact</p>
+                  <p className=''>Contact</p>
                 </NavLinks>
                 <Link
                   className='navItem'
@@ -100,7 +100,7 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <p className='text-gray-500'>Blog</p>
+                  <p className=' cursor-pointer mx-4 hover:scale-110 duration-1000'>Blog</p>
                 </Link>
               </NavItems>
             </NavContainer>

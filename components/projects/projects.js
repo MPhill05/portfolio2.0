@@ -62,7 +62,7 @@ const Projects = () => {
                   className={"keen-slider__slide"}
                 >
                   <div className='rounded-lg shadow-2xl w-1/2 card'>
-                    <div className='w-50 h-40 m-auto container'>
+                    <div className='max-w-40 max-h-30 m-auto'>
                       <img className='backgroundImage' src={project.img} />
                     </div>
                     <div className="card-content">
