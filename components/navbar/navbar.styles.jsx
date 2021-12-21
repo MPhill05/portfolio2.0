@@ -95,8 +95,8 @@ export const NavItems = styled.ul`
     transition: all 1s ease-out;
 
     &:hover {
-      transition: 0.5s;
-      transition-delay: 0.2s;
+      transition: 0.1s;
+      ${'' /* transition-delay: 0.1s; */}
       transform: scale(1.1);
     }
   }
@@ -108,7 +108,6 @@ export const Blog = styled.li`
 `;
 
 export const NavLinks = styled(LinkScroll)`
-  color: #fff;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -117,7 +116,7 @@ export const NavLinks = styled(LinkScroll)`
   cursor: pointer;
 
   &.active {
-    border-bottom: 2px solid #fff;
-    color: #01BF71;
+    border-bottom: 3px solid #01BF71;
+    color: #fff;
   }
 `;

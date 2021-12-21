@@ -70,7 +70,7 @@ const Navbar = () => {
                   offset={-80}
                   spy={true}
                 >
-                  About
+                  <p className='text-gray-500'>About</p>
                 </NavLinks>
                 <NavLinks
                   to='projects'
@@ -81,7 +81,7 @@ const Navbar = () => {
                   offset={-80}
                   spy={true}
                 >
-                  Projects
+                  <p className='text-gray-500'>Projects</p>
                 </NavLinks>
                 <NavLinks
                   to='contact'
@@ -92,15 +92,15 @@ const Navbar = () => {
                   offset={-80}
                   spy={true}
                 >
-                  Contact
+                  <p className='text-gray-500'>Contact</p>
                 </NavLinks>
                 <Link
-                  href='/blog'
                   className='navItem'
+                  href='/blog'
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Blog
+                  <p className='text-gray-500'>Blog</p>
                 </Link>
               </NavItems>
             </NavContainer>
