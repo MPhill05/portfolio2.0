@@ -113,7 +113,6 @@ export const NavigationWrapper = styled.div`
   width: 70vw;
   margin: auto;
   padding-bottom: 2em;
-  ${'' /* height: 750px; */}
 
   .arrow {
     width: 30px;
@@ -122,7 +121,7 @@ export const NavigationWrapper = styled.div`
     top: 50%;
     transform: translateY(-50%);
     -webkit - transform: translateY(-50%);
-    fill: #01BF71;
+    fill: #00ff00;
     cursor: pointer;
   }
 
@@ -167,6 +166,6 @@ export const Dots = styled.div`
   }
 
   .dot.active {
-    background: #39FF14;
+    background: #00ff00;
   }
 `;

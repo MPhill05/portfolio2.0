@@ -4,7 +4,6 @@ export const StyledButton = styled.button`
   padding-top: 10px;
   position: relative;
 	padding: 10px 30px;
-	${'' /* margin: 0 15px; */}
 	color: #21ebff;
 	text-decoration: none;
 	text-transform: uppercase;
