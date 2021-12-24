@@ -68,8 +68,12 @@ export const NavLogo = styled.p`
   transition: all 1s ease-out;
 
   &:hover {
-    color: #39FF14;
+    color: #00ff00;
   }
+
+  ${'' /* @media screen and (max-width: 743px) {
+    font-size: 1em;
+  } */}
 `;
 
 export const NavContainer = styled.div`
@@ -96,8 +100,6 @@ export const NavItems = styled.ul`
     transition-delay: 0.3s;
 
     &:hover {
-      ${'' /* transition: 0.1s; */}
-      ${'' /* transition-delay: 0.1s; */}
       transform: scale(1.1);
     }
   }
@@ -117,7 +119,11 @@ export const NavLinks = styled(LinkScroll)`
   cursor: pointer;
 
   &.active {
-    border-bottom: 3px solid #01BF71;
+    border-bottom: 3px solid #00ff00;
     color: #fff;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0;
   }
 `;
