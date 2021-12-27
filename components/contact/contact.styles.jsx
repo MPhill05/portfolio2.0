@@ -12,27 +12,34 @@ export const ContactSection = styled.div`
   &::before {
     content: '';
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background: linear-gradient(#ffeb3b, #e91e63);
     border-radius: 50%;
-    transform: translate(-420px, -100px);
+    transform: translate(-220px, -100px);
+
+    @media screen and (max-width: 767px) {
+      width: 200px;
+      height: 200px;
+      transform: translate(-200px, -150px);
+    }
   }
 
   &::after {
     content: '';
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background: linear-gradient(#2196f3, #83d8ff);
     border-radius: 50%;
-    transform: translate(400px, 50px);
-  }
+    transform: translate(200px, 50px);
 
-  @media (max-width: 767px) {
-    &::before {
-      transform: translate(-100px, -180px);
+    @media screen and (max-width: 767px) {
+      width: 200px;
+      height: 200px;
+      transform: translate(100px, 50px);
     }
+  }
 
     &::after {
       transform: translate(120px, 100px);

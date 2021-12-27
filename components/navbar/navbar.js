@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
     <IconContext.Provider value={{ color: '#fff' }}>
       <Nav scrollNav={scrollNav}>
-        <div className='max-w-6xl mx-auto px-4 py-5 md:py-5 z-50'>
+        <div className='max-w-6xl mx-auto px-4 md:py-5 z-50'>
           <Wrapper className='flex md:flex-row justify-between items-center'>
             <Link
               href='/'
@@ -59,7 +59,7 @@ const Navbar = () => {
             >
               <NavLogo onClick={toggleHome}>Mark Phillips</NavLogo>
             </Link>
-            <div className='container flex'>
+            <div className='container hidden md:flex'>
               <NavContainer>
                 <NavItems>
                   <NavLinks

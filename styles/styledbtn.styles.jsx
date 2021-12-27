@@ -8,7 +8,7 @@ export const StyledButton = styled.button`
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	font-size: 20px;
+	font-size: 14px;
 	overflow: hidden;
 	transition: 0.5s;
 	-webkit-box-reflect: below  1px linear-gradient(transparent,#0003);
