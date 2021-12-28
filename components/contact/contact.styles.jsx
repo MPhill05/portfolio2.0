@@ -31,10 +31,14 @@ export const ContactSection = styled.div`
 
   @media (max-width: 767px) {
     &::before {
+      height: 200px;
+      width: 200px;
       transform: translate(-100px, -180px);
     }
 
     &::after {
+      height: 200px;
+      width: 200px;
       transform: translate(120px, 100px);
     }
   }

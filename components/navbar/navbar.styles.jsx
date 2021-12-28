@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link as LinkScroll } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 export const Nav = styled.div`
   background: ${({ scrollNav }) => (scrollNav ? '#111827' : 'transparent')};
@@ -70,10 +71,6 @@ export const NavLogo = styled.p`
   &:hover {
     color: #00ff00;
   }
-
-  ${'' /* @media screen and (max-width: 743px) {
-    font-size: 1em;
-  } */}
 `;
 
 export const NavContainer = styled.div`
@@ -122,8 +119,76 @@ export const NavLinks = styled(LinkScroll)`
     border-bottom: 3px solid #00ff00;
     color: #fff;
   }
+`;
 
-  @media screen and (max-width: 767px) {
-    padding: 0;
+export const bar = styled.span`
+  display: block;
+  width: 35px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #222222;
+`;
+
+export const HamburgerMenu = styled.div`
+  display: flex;
+  
+`;
+
+export const HamburgerIcon = styled.div`
+  color: ${({ reverseColor }) => reverseColor ? '#000' : '#fff'};
+  cursor: pointer;
+  z-index: 99;
+  transition: all 250ms ease-in-out;
+`;
+
+export const MenuContainer = styled(motion.div)`
+  min-width: 300px;
+  width: 100%;
+  max-width: 90%;
+  height: 100%;
+  background-color: #111827;
+  box-shadow: -2px 0 2px rgba(0, 255, 0, 0.3);
+  z-index: 90;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(4em);
+  user-select: none;
+  padding: 1em 2.5em;
+`;
+
+export const NavMenuContainer = styled.div`
+  width: 100%
+  display: flex;
+  flex-direction: column;
+`;
+
+export const NavList = styled.ul`
+  padding: 0 0.8em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const NavLink = styled(motion.li)`
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: #84E421;
   }
 `;
