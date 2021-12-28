@@ -20,9 +20,10 @@ export const IntroContainer = styled.div`
   grid-template-areas: 'col1 col2';
 
   @media screen and (max-width: 768px) {
-    grid-auto-columns: auto;
+    ${'' /* grid-auto-columns: auto;
     grid-template-areas: none;
-    grid-auto-flow: row;
+    grid-auto-flow: row; */}
+    display: inline-block;
   }
 `;
 
@@ -30,7 +31,7 @@ export const LeftContent = styled.div`
   height: 100%;
   margin-top: 20vh;
   float: left;
-  width: 20vw;
+  width: 40vw;
   
   h1 {
     font-size: 2rem;
@@ -43,7 +44,11 @@ export const LeftContent = styled.div`
 
   grid-area: col1;
   @media screen and (max-width: 768px) {
-    grid-area: unset;
+    margin-top: 0;
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: center;
   }
 `;
 
@@ -58,7 +63,11 @@ export const Typing = styled.div`
 
   @keyframes animated-text{
     from{width: 0;}
-    to{width: 320px;}
+    to{width: 180px;}
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: auto;
   }
 `;
 
@@ -70,7 +79,7 @@ export const TextCursor = styled.div`
   border-bottom: solid 3px rgba(0,255,0,.75);
   position: absolute;
   right: -10px;
-  width: 20px;
+  width: 15px;
 
   animation: animated-cursor 600ms steps(30,end) infinite;
 
@@ -82,11 +91,18 @@ export const TextCursor = styled.div`
 
 export const RightContent = styled.div`
   margin-top: 10vh;
-  padding-left: 150px;
   grid-area: col2;
 
   @media screen and (max-width: 768px) {
-    grid-area: unset;
+    margin-top: 0;
+    padding: 0;
+    display: block;
+    float: none;
+    width: 100%;
+    margin: auto;
+
+    .Lottie {
+    }
 `;
 
 export const LearnMore = styled.div`

@@ -26,6 +26,11 @@ const Intro = () => {
   return (
     <IntroSection>
       <IntroContainer>
+        <RightContent>
+          <Lottie
+            options={defaultOptions}
+          />
+        </RightContent>
         <LeftContent>
           <h1>Mark Phillips</h1>
           <Typing><SoftDevText className='text-gray-400'>Software Developer</SoftDevText><TextCursor /></Typing>
@@ -45,12 +50,6 @@ const Intro = () => {
             </StyledButton>
           </a>
         </LeftContent>
-        <RightContent>
-          <Lottie options={defaultOptions}
-            height='50vh'
-            width='40vw'
-          />
-        </RightContent>
       </IntroContainer>
     </IntroSection >
   )
