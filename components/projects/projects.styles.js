@@ -104,7 +104,6 @@ export const NumberSlider = styled.div`
   .projectBtn {
     display: inline;
     text-decoration: none;
-    font-size: 20px;
   }
 `;
 
@@ -136,6 +135,10 @@ export const NavigationWrapper = styled.div`
 
   .arrow--disabled {
     fill: rgba(255, 255, 255, 0.5);
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 90vw;
   }
 `;
 

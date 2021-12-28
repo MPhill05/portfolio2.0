@@ -61,7 +61,7 @@ const Projects = () => {
                   key={idx}
                   className={"keen-slider__slide"}
                 >
-                  <div className='rounded-lg shadow-2xl w-1/2 card'>
+                  <div className='rounded-lg shadow-2xl w-4/5 lg:w-1/2 card'>
                     <div className='max-w-40 max-h-30 m-auto'>
                       <img className='backgroundImage' src={project.img} />
                     </div>

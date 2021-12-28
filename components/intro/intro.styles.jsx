@@ -6,6 +6,10 @@ export const IntroSection = styled.div`
   height: 90vh;
   position: relative;
   margin: auto;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 250px;
+  }
 `;
 
 export const IntroContainer = styled.div`
@@ -13,6 +17,13 @@ export const IntroContainer = styled.div`
   display: grid;
   margin: auto;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'col1 col2';
+
+  @media screen and (max-width: 768px) {
+    grid-auto-columns: auto;
+    grid-template-areas: none;
+    grid-auto-flow: row;
+  }
 `;
 
 export const LeftContent = styled.div`
@@ -29,13 +40,18 @@ export const LeftContent = styled.div`
  .contactSVG {
     transform: rotate(45deg);
   }
+
+  grid-area: col1;
+  @media screen and (max-width: 768px) {
+    grid-area: unset;
+  }
 `;
 
 export const Typing = styled.div`
   height: 35px;
   white-space: nowrap;
   font-family: 'Source Code Pro', monospace;  
-  font-size: 28px;
+  ${'' /* font-size: 28px; */}
   position: relative;
 
   animation: animated-text 2s steps(30,end) 1s 1 normal both;
@@ -67,6 +83,10 @@ export const TextCursor = styled.div`
 export const RightContent = styled.div`
   margin-top: 10vh;
   padding-left: 150px;
+  grid-area: col2;
+
+  @media screen and (max-width: 768px) {
+    grid-area: unset;
 `;
 
 export const LearnMore = styled.div`
