@@ -9,14 +9,14 @@ const About = () => {
           About Me
         </h1>
       </div>
-      <div className='flex flex-row flex-wrap pb-20 bg-gray-800 -mt-10 dark:bg-gray-900'>
-        <div className='w-1/4 mt-8 ml-auto'>
+      <div className='flex flex-row flex-wrap pb-10 bg-gray-800 -mt-20 md:-mt-10 dark:bg-gray-900'>
+        <div className='w-1/4 mt-12 md:mt-24 ml-auto'>
           <img
             src='/static/laptop.webp'
             className='h-200 w-200 mx-auto my-4'
           />
         </div>
-        <div className='w-1/2 mt-36 mr-auto col-span-1 md:col-span-2'>
+        <div className='w-1/2 mt-12 md:mt-24 mr-auto col-span-1 md:col-span-2'>
           <p className='text-xl justify-start space-x-4 text-gray-300 mb-4 dark:text-gray-300 md:text-center'>
             Hi! I'm Mark Phillips, a self-taught Full-Stack Web Developer proficient in JavaScript, various frameworks and libraries.
             <br />
