@@ -1,5 +1,6 @@
+import Link from 'next/link'
 import React from 'react'
-import { NavLink, NavMenuContainer } from './navbar.styles'
+import { NavLink, NavLinks, NavMenuContainer } from './navbar.styles'
 
 const variants = {
   show: {
@@ -12,7 +13,7 @@ const variants = {
   }
 }
 
-const MobileNavMenu = ({ isOpen }) => {
+const MobileNavMenu = ({ isOpen, toggleMenu }) => {
   return (
     <NavMenuContainer>
       <NavLink
@@ -29,7 +30,19 @@ const MobileNavMenu = ({ isOpen }) => {
           },
         }}
       >
-        Home
+        <NavLinks
+          to='about'
+          className='navItem'
+          smooth={true}
+          duration={500}
+          exact='true'
+          offset={-80}
+          spy={true}
+        >
+          <p className='font-bold -ml-4 text-xl'>
+            About
+          </p>
+        </NavLinks>
       </NavLink>
       <NavLink
         initial={false}
@@ -45,7 +58,19 @@ const MobileNavMenu = ({ isOpen }) => {
           },
         }}
       >
-        Projects
+        <NavLinks
+          to='projects'
+          className='navItem'
+          smooth={true}
+          duration={500}
+          exact='true'
+          offset={-80}
+          spy={true}
+        >
+          <p className='font-bold -ml-4 text-xl'>
+            Projects
+          </p>
+        </NavLinks>
       </NavLink>
       <NavLink
         initial={false}
@@ -61,7 +86,19 @@ const MobileNavMenu = ({ isOpen }) => {
           },
         }}
       >
-        Contact
+        <NavLinks
+          to='contact'
+          className='navItem'
+          smooth={true}
+          duration={500}
+          exact='true'
+          offset={-80}
+          spy={true}
+        >
+          <p className='font-bold -ml-4 text-xl'>
+            Contact
+          </p>
+        </NavLinks>
       </NavLink>
       <NavLink
         initial={false}
@@ -77,9 +114,18 @@ const MobileNavMenu = ({ isOpen }) => {
           },
         }}
       >
-        Blog
+        <Link
+          className='navItem'
+          href='/blog'
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p className='font-bold ml-0 text-xl'>
+            Blog
+          </p>
+        </Link>
       </NavLink>
-    </NavMenuContainer>
+    </NavMenuContainer >
   )
 }
 
