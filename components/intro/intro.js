@@ -52,7 +52,7 @@ const Intro = () => {
           />
         </RightContent>
       </IntroContainer>
-    </IntroSection>
+    </IntroSection >
   )
 }
 

@@ -34,14 +34,18 @@ export const ContactSection = styled.div`
     border-radius: 50%;
     transform: translate(200px, 50px);
 
-    @media screen and (max-width: 767px) {
-      width: 200px;
+
+  @media (max-width: 767px) {
+    &::before {
       height: 200px;
-      transform: translate(100px, 50px);
+      width: 200px;
+      transform: translate(-100px, -180px);
     }
   }
 
     &::after {
+      height: 200px;
+      width: 200px;
       transform: translate(120px, 100px);
     }
   }
