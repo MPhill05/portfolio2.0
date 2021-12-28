@@ -156,13 +156,83 @@ export const MenuContainer = styled(motion.div)`
   right: 0;
   transform: translateX(4em);
   user-select: none;
-  padding: 1em 2.5em;
+  padding: 1em 5em;
+`;
+
+export const TopContainer = styled.div`
+  display: flex;
+  width: 100%;
+  padding-top: 15px;
+`;
+
+export const IconContainer = styled.div`
+  color: #fff;
+  padding-right: 5px;
+`;
+
+export const GithubIcon = styled(motion.button)`
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 250ms ease-in-out;
+  display: flex;
+  padding: 6px 15px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:not(:last-of-type) {
+    border-right: 1px solid #00ff00;
+  }
+`;
+
+export const LinkedinIcon = styled(motion.button)`
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 250ms ease-in-out;
+  display: flex;
+  padding: 6px 15px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:not(:last-of-type) {
+    border-right: 1px solid #00ff00;
+  }
+`;
+
+export const TwitterIcon = styled(motion.button)`
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  transition: all 250ms ease-in-out;
+  display: flex;
+  padding: 6px 15px;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
 `;
 
 export const NavMenuContainer = styled.div`
   width: 100%
   display: flex;
   flex-direction: column;
+  padding-top: 50px;
 `;
 
 export const NavList = styled.ul`
@@ -174,9 +244,9 @@ export const NavList = styled.ul`
 
 export const NavLink = styled(motion.li)`
   font-weight: 600;
-  font-size: 18px;
+  font-size: 24px;
   color: #fff;
-  height: 35px;
+  height: 58px;
   display: flex;
   align-items: center;
   cursor: pointer;
