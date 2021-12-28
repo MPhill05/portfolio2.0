@@ -58,6 +58,7 @@ const MobileNav = (props) => {
       >
         <TopContainer>
           <GithubIcon
+            onClick={toggleMenu}
             initial={false}
             animate={isOpen ? 'show' : 'hide'}
             variants={commonVariants}
@@ -83,6 +84,7 @@ const MobileNav = (props) => {
             </a>
           </GithubIcon>
           <LinkedinIcon
+            onClick={toggleMenu}
             initial={false}
             animate={isOpen ? 'show' : 'hide'}
             variants={commonVariants}
@@ -108,6 +110,7 @@ const MobileNav = (props) => {
             </a>
           </LinkedinIcon>
           <TwitterIcon
+            onClick={toggleMenu}
             initial={false}
             animate={isOpen ? 'show' : 'hide'}
             variants={commonVariants}
