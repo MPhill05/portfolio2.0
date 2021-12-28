@@ -179,6 +179,7 @@ export const GithubIcon = styled(motion.button)`
   transition: all 250ms ease-in-out;
   display: flex;
   padding: 6px 15px;
+  padding-left: 0;
 
   &:focus {
     outline: none;
