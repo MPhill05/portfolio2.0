@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import React, { useState } from "react";
-import Modal from 'react-modal';
+import React, { useState, Fragment } from "react";
+import { Dialog, Transition } from '@headlessui/react';
 
 import { StyledButton } from '../../styles/styledbtn.styles';
 
@@ -37,91 +37,161 @@ const Projects = () => {
       setLoaded(true)
     },
   })
+  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
-  const handleClick = (e) => {
-    e.preventDefault()
-    router.push(`modal/${id}`);
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
   }
 
   return (
-    <ProjectSection id='projects'>
-      <section className='bg-white dark:bg-gray-800 z-50'>
-        <div className='max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800'>
-          <h1 className='text-5xl md:text-9xl font-bold py-20 text-center md:text-right'>
-            Projects
-          </h1>
-        </div>
-        <NavigationWrapper className="navigation-wrapper flex">
-          <KeenSlider ref={sliderRef} className="keen-slider">
-            {myProjects.projects.map((project, idx) => {
-              console.log(project, idx)
-              return (
-                <NumberSlider
-                  key={idx}
-                  className={"keen-slider__slide"}
-                >
-                  <div className='rounded-lg shadow-2xl w-4/5 lg:w-1/2 card'>
-                    <div className='max-w-40 max-h-30 m-auto'>
-                      <img className='backgroundImage' src={project.img} />
+    <>
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog
+          as="div"
+          className="fixed inset-0 z-10 overflow-y-auto"
+          onClose={closeModal}
+        >
+          <div className="min-h-screen px-4 text-center">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Dialog.Overlay className="fixed inset-0" />
+            </Transition.Child>
+
+            {/* This element is to trick the browser into centering the modal contents. */}
+            <span
+              className="inline-block h-screen align-middle"
+              aria-hidden="true"
+            >
+              &#8203;
+            </span>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <div className="inline-block w-full max-w-7xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-gray-900 shadow-md shadow-lime-500 rounded-2xl">
+                <button onClick={closeModal} className='bg-black cursor-pointer absolute right-5'>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" /></svg>
+                </button>
+                <div className="mt-2">
+                  <img
+                    src='/static/blkGoldSiteImg.webp'
+                    className='rounded-tr-md rounded-tl-md h-48 w-full lg:h-auto lg:w-2/5 lg:rounded-bl-md lg:rounded-tr-none'
+                  />
+                  <div className='p-8 rounded-bl-md rounded-br-md text-white text-center'>
+                    <h1 className='text-3xl'>Project Title</h1>
+                    <h4 className='font-semibold text-xl mt-5'>Project Type</h4>
+                    <h6 className='font-semibold text-lg mt-5'>Tech Used</h6>
+                    <div className='overscroll-y-auto'>
+                      <p className='text-left'>Challenge Section</p>
+                      <p className='text-left'>Solution Section</p>
+                      <p className='text-left'>Outcome Section</p>
                     </div>
-                    <div className="card-content">
-                      <h2 className='card-title'>{project.projectName}</h2>
-                      <p className='card-body'>{project.projectType}</p>
-                      <Link href={`/modal/${project.projectName}`}>
-                        <StyledButton href={project} className='projectBtn'>View More&nbsp;
+                    <StyledButton className=''>
+                      View Code
+                    </StyledButton>
+                    <StyledButton className=''>
+                      View Site
+                    </StyledButton>
+                  </div>
+                </div>
+              </div>
+            </Transition.Child>
+          </div>
+        </Dialog>
+      </Transition>
+      <ProjectSection id='projects'>
+        <section className='bg-white dark:bg-gray-800 z-50'>
+          <div className='max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800'>
+            <h1 className='text-5xl md:text-9xl font-bold py-20 text-center md:text-right'>
+              Projects
+            </h1>
+          </div>
+          <NavigationWrapper className="navigation-wrapper flex">
+            <KeenSlider ref={sliderRef} className="keen-slider">
+              {myProjects.projects.map((project, idx) => {
+                console.log(project, idx)
+                return (
+                  <NumberSlider
+                    key={idx}
+                    className={"keen-slider__slide"}
+                  >
+                    <div className='rounded-lg shadow-2xl w-4/5 lg:w-1/2 card'>
+                      <div className='max-w-40 max-h-30 m-auto'>
+                        <img className='backgroundImage' src={project.img} />
+                      </div>
+                      <div className="card-content">
+                        <h2 className='card-title'>{project.projectName}</h2>
+                        <p className='card-body'>{project.projectType}</p>
+                        <StyledButton onClick={openModal} className='projectBtn'>View More&nbsp;
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
                         </StyledButton>
-                      </Link>
+                      </div>
                     </div>
-                  </div>
-                </NumberSlider>
-              )
-            })}
-          </KeenSlider>
-          {loaded && instanceRef.current && (
-            <>
-              <Arrow
-                left
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
-                }
-                disabled={currentSlide === 0}
-              />
+                  </NumberSlider>
+                )
+              })}
+            </KeenSlider>
+            {loaded && instanceRef.current && (
+              <>
+                <Arrow
+                  left
+                  onClick={(e) =>
+                    e.stopPropagation() || instanceRef.current?.prev()
+                  }
+                  disabled={currentSlide === 0}
+                />
 
-              <Arrow
-                onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.next()
-                }
-                disabled={
-                  currentSlide ===
-                  instanceRef.current.track.details.slides.length - 1
-                }
-              />
-            </>
+                <Arrow
+                  onClick={(e) =>
+                    e.stopPropagation() || instanceRef.current?.next()
+                  }
+                  disabled={
+                    currentSlide ===
+                    instanceRef.current.track.details.slides.length - 1
+                  }
+                />
+              </>
+            )}
+          </NavigationWrapper>
+          {loaded && instanceRef.current && (
+            <Dots className="dots">
+              {[
+                ...Array(instanceRef.current.track.details.slides.length).keys(),
+              ].map((idx) => {
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      instanceRef.current?.moveToIdx(idx)
+                    }}
+                    className={"dot" + (currentSlide === idx ? " active" : "")}
+                  ></button>
+                )
+              })}
+            </Dots>
           )}
-        </NavigationWrapper>
-        {loaded && instanceRef.current && (
-          <Dots className="dots">
-            {[
-              ...Array(instanceRef.current.track.details.slides.length).keys(),
-            ].map((idx) => {
-              return (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    instanceRef.current?.moveToIdx(idx)
-                  }}
-                  className={"dot" + (currentSlide === idx ? " active" : "")}
-                ></button>
-              )
-            })}
-          </Dots>
-        )}
-      </section>
-    </ProjectSection>
+        </section>
+      </ProjectSection>
+    </>
   )
 }
 
