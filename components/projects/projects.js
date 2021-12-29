@@ -89,26 +89,28 @@ const Projects = () => {
                 <button onClick={closeModal} className='bg-black cursor-pointer absolute right-5'>
                   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" /></svg>
                 </button>
-                <div className="mt-2">
+                <div className="mt-2 lg:flex lg:flex-row lg:h-auto">
                   <img
                     src='/static/blkGoldSiteImg.webp'
-                    className='rounded-tr-md rounded-tl-md h-48 w-full lg:h-auto lg:w-2/5 lg:rounded-bl-md lg:rounded-tr-none'
+                    className='rounded-tr-md rounded-tl-md h-54 w-full lg:h-auto lg:w-3/6 lg:rounded-bl-md lg:rounded-tr-none'
                   />
-                  <div className='p-8 rounded-bl-md rounded-br-md text-white text-center'>
+                  <div className='p-8 rounded-bl-md rounded-br-md text-white text-center lg:pt-0 lg:mx-auto'>
                     <h1 className='text-3xl'>Project Title</h1>
                     <h4 className='font-semibold text-xl mt-5'>Project Type</h4>
                     <h6 className='font-semibold text-lg mt-5'>Tech Used</h6>
-                    <div className='overscroll-y-auto'>
+                    <div className='h-40 overflow-y-scroll'>
                       <p className='text-left'>Challenge Section</p>
                       <p className='text-left'>Solution Section</p>
                       <p className='text-left'>Outcome Section</p>
                     </div>
-                    <StyledButton className=''>
-                      View Code
-                    </StyledButton>
-                    <StyledButton className=''>
-                      View Site
-                    </StyledButton>
+                    <div className='mt-10 content-evenly'>
+                      <StyledButton className='mr-5'>
+                        View Code
+                      </StyledButton>
+                      <StyledButton className='ml-5'>
+                        View Site
+                      </StyledButton>
+                    </div>
                   </div>
                 </div>
               </div>
