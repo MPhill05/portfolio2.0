@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { StyledButton } from '../../styles/styledbtn.styles';
 
 const PostCard = ({ post }) => {
-  console.log(post);
   return (
     <div className='bg-gray-900 shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
       <div className='bg-gray-800 relative overflow-hidden shadow-md pb-80 mb-6'>
