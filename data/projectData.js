@@ -7,7 +7,7 @@ export const myProjects = {
       img: '/static/bgLogo.webp',
       alt: 'BlkGold',
       modalImg: '/static/blkGoldSiteImg.webp',
-      techStack: 'ReactJS | Sass | Bootstrap | HTML | CSS CircleCi | AWS ',
+      techStack: 'ReactJS | Sass | Bootstrap | CircleCi | AWS ',
       challenge: `Challenge: Outside of coding I enjoy creating music for fun, and wanted a centralized location for fans to find my music. `,
       solution: 'Solution: Blkgoldmusic.com is a simple web application that allows users to quickly find my music, videos, and any related information to the project. It shows fans my most recent releases on the home page along with all applicable social media links, and a contact form to stay up to date with me via email. The responsive web app was built with Sass and Bootstrap for a smooth responsive design, complete with some simple React routing and modals to easily show applicable information.',
       outcome: 'Outcome: The site is a simple responsive React application with a clean and quick UI. Through designing, developing and deploying this modern, yet simple application, my overall followers increased by around 100 users across all social platforms and has given me a way to access fans of my music directly.',
