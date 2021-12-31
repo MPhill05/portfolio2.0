@@ -8,47 +8,6 @@ export const ContactSection = styled.div`
   padding: 20px;
   width: 100%;
   background: #001923;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    background: linear-gradient(#ffeb3b, #e91e63);
-    border-radius: 50%;
-    transform: translate(-220px, -100px);
-
-    @media screen and (max-width: 767px) {
-      width: 200px;
-      height: 200px;
-      transform: translate(-200px, -150px);
-    }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    background: linear-gradient(#2196f3, #83d8ff);
-    border-radius: 50%;
-    transform: translate(200px, 50px);
-
-
-  @media (max-width: 767px) {
-    &::before {
-      height: 200px;
-      width: 200px;
-      transform: translate(-100px, -180px);
-    }
-  }
-
-    &::after {
-      height: 200px;
-      width: 200px;
-      transform: translate(120px, 100px);
-    }
-  }
 `;
 
 export const ContactContainer = styled.div`
@@ -103,11 +62,11 @@ export const ContactContainer = styled.div`
   }
 `;
 
-export const StyledForm = styled.form``;
-
 export const FormRow = styled.div`
   position: relative;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 `;
 
 export const FormCol = styled.div`
@@ -122,6 +81,10 @@ export const FormCol = styled.div`
     width: 100%;
     height: 40px;
     color: #fff;
+  }
+
+  .messageInbox {
+    height: 88px;
   }
 
   .inputBox input,
@@ -175,19 +138,21 @@ export const FormCol = styled.div`
   }
 
   .inputBox textarea {
-    position: relative;
     width: 100%;
     height: 100px;
     padding: 10px 0;
     background: transparent;
     border: none;
     outline: none;
-    overflow: hidden;
   }
 
   .inputBox textarea {
     height: 100%;
     resize: none;
+
+    @media screen and (max-width: 767px) {
+      width: 95%;
+    }
   }
 
   .inputBox textarea:focus ~ .line,
