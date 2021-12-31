@@ -3,67 +3,82 @@ import {
   ContactSection,
   FormCol,
   FormRow,
-  StyledForm,
 } from "./contact.styles";
 import { StyledButton } from "../../styles/styledbtn.styles";
-import ReCAPTCHA from 'react-google-recaptcha';
-import { useRef, useState } from 'react';
-
-const inititalState = {
-  name: '',
-  email: '',
-  message: '',
-}
+import { useState } from 'react';
 
 const Contact = () => {
-  const recaptchaKey = '6LeyZuscAAAAACNo-yLQQhW4y7lEEbK857LVoXQS';
-  const recaptchaRef = useRef();
-
-  const [state, setState] = useState(inititalState);
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
   const [submitting, setSubmitting] = useState(false);
-  const [recaptchaToken, setReCaptchaToken] = useState();
-  const [message, setMessage] = useState();
-  const form = useRef();
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitting(true);
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Sending')
 
-    if (recaptchaToken !== null) {
-      grecaptcha.execute();
-
-      emailjs.sendForm('service_mwihdnt', 'template_l7wqe3k', form.current, 'user_aRyqERSIkRT7xK8O4txAM')
-        .then((result) => {
-          setMessage({
-            className: 'bg-green-500',
-            text: 'Thanks! I\'ll be in contact shortly!'
-          })
-          e.target.reset();
-          recaptchaRef.current.reset();
-          console.log(result.text);
-        })
-    } else {
-      setMessage({
-        className: 'bg-red-500',
-        text: 'Sorry, there was a problem. Please try again!'
-      })
-      console.log(recaptchaToken);
+    let data = {
+      name,
+      email,
+      message
     }
-    setSubmitting(false);
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setName('')
+        setEmail('')
+        setMessage('')
+      }
+    })
   }
 
-  const handleInput = e => {
-    e.preventDefault();
-    const inputName = e.currentTarget.name;
-    const value = e.currentTarget.value;
+  // const recaptchaKey = '6LeyZuscAAAAACNo-yLQQhW4y7lEEbK857LVoXQS';
+  // const recaptchaRef = useRef();
 
 
-    setState(prev => ({ ...prev, [inputName]: value }))
-  }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setSubmitting(true);
 
-  const updateRecaptchaToken = (token) => {
-    setReCaptchaToken(token = 'g-recaptcha-response');
-  };
+  //   if (e.target !== null) {
+
+  //     emailjs.sendForm('service_mwihdnt', 'template_l7wqe3k', form.current, 'user_aRyqERSIkRT7xK8O4txAM')
+  //       .then((result) => {
+  //         setMessage({
+  //           className: 'bg-green-500',
+  //           text: 'Thanks! I\'ll be in contact shortly!'
+  //         })
+  //         e.target.reset();
+  //         recaptchaRef.current.reset();
+  //       })
+  //   } else {
+  //     setMessage({
+  //       className: 'bg-red-500',
+  //       text: 'Sorry, there was a problem. Please try again!'
+  //     })
+  //   }
+  //   setSubmitting(false);
+  // }
+
+  // const handleInput = e => {
+  //   e.preventDefault();
+  //   const inputName = e.currentTarget.name;
+  //   const value = e.currentTarget.value;
+
+
+  //   setState(prev => ({ ...prev, [inputName]: value }))
+  // }
 
   return (
     <ContactSection id='contact'>
@@ -71,7 +86,7 @@ const Contact = () => {
         <h2 className='text-2xl'><svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
         </svg> Contact Me</h2>
-        <StyledForm ref={form} onSubmit={handleSubmit}>
+        <form>
           <FormRow className='row100'>
             <FormCol className='col'>
               <div className='inputBox'>
@@ -79,8 +94,7 @@ const Contact = () => {
                   htmlFor='name'
                   type='text'
                   name=''
-                  // value={state.name}
-                  onChange={handleInput}
+                  onChange={(e) => { setName(e.target.value) }}
                   required
                 />
                 <span className='text'>Name</span>
@@ -96,8 +110,7 @@ const Contact = () => {
                   htmlFor='email'
                   type='text'
                   name=''
-                  // value={state.email}
-                  onChange={handleInput}
+                  onChange={(e) => { setEmail(e.target.value) }}
                   required
                 />
                 <span className='text'>Email</span>
@@ -108,34 +121,33 @@ const Contact = () => {
 
           <FormRow className='row100'>
             <FormCol className='col'>
-              <div className='inputBox'>
+              <div className='inputBox messageInbox'>
                 <textarea
                   htmlFor='message'
-                  className='inputBox textarea'
-                  htmlFor='message'
+                  onChange={(e) => { setMessage(e.target.value) }}
+                  className="ml-2 mr-5"
                   required
                 />
-                <span class="text">Type Your Message Here...</span>
-                <span class="line"></span>
+                <span className="text">Message</span>
+                <span className="line"></span>
               </div>
             </FormCol>
           </FormRow>
 
           <FormRow className='row100 sendMsgBtn'>
             <FormCol className='col'>
-              {/* <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={recaptchaKey}
-                onChange={updateRecaptchaToken}
-              // size='invisible'
-              /> */}
               <StyledButton
-                disabled={submitting}
+                input
+                onClick={(e) => { handleSubmit(e) }}
+                // disabled={submitting}
                 type='submit'
-              >{submitting ? 'Submitting...' : 'Send Message'}</StyledButton>
+              >
+                Send Message
+                {/* {submitting ? 'Submitting...' : 'Send Message'} */}
+              </StyledButton>
             </FormCol>
           </FormRow>
-        </StyledForm>
+        </form>
       </ContactContainer>
     </ContactSection>
   )

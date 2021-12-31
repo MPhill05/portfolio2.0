@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
+    "dotenv": "^10.0.0",
     "framer-motion": "^5.5.5",
+    "googleapis": "^92.0.0",
     "graphql": "^16.2.0",
     "graphql-request": "^3.7.0",
     "html-react-parser": "^1.4.4",
@@ -16,6 +18,7 @@
     "next": "latest",
     "next-images": "^1.8.4",
     "next-themes": "^0.0.15",
+    "nodemailer": "^6.7.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
