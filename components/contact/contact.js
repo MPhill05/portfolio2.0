@@ -16,7 +16,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Sending')
 
     let data = {
       name,
@@ -33,12 +32,17 @@ const Contact = () => {
       body: JSON.stringify(data)
     }).then((res) => {
       console.log('Response received')
+      setSubmitting(true)
       if (res.status === 200) {
-        console.log('Response succeeded!')
-        setSubmitted(true)
+        console.log('Response succeeded!' + res.status)
+        setSubmitted(false)
         setName('')
         setEmail('')
         setMessage('')
+        setMessage({
+          className: 'messageField',
+          text: 'Thanks! I\'ll be in contact shortly!'
+        })
       }
     })
   }
@@ -83,7 +87,7 @@ const Contact = () => {
   return (
     <ContactSection id='contact'>
       <ContactContainer className='container'>
-        <h2 className='text-2xl'><svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
+        <h2 className='text-2xl messageField'><svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
         </svg> Contact Me</h2>
         <form>
@@ -142,8 +146,7 @@ const Contact = () => {
                 // disabled={submitting}
                 type='submit'
               >
-                Send Message
-                {/* {submitting ? 'Submitting...' : 'Send Message'} */}
+                {submitting ? 'Submitting...' : 'Send Message'}
               </StyledButton>
             </FormCol>
           </FormRow>
