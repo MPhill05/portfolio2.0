@@ -8,9 +8,10 @@ import { StyledButton } from "../../styles/styledbtn.styles";
 import { useState } from 'react';
 
 const Contact = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState(false)
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -31,18 +32,19 @@ const Contact = () => {
       },
       body: JSON.stringify(data)
     }).then((res) => {
-      console.log('Response received')
       setSubmitting(true)
+      console.log('Response received')
       if (res.status === 200) {
-        console.log('Response succeeded!' + res.status)
-        setSubmitted(false)
         setName('')
         setEmail('')
         setMessage('')
-        setMessage({
-          className: 'messageField',
-          text: 'Thanks! I\'ll be in contact shortly!'
-        })
+        const timer = setTimeout(() => {
+          setSubmitted(true)
+          setSubmitting(false)
+        }, 3000);
+        return () => clearTimeout(timer);
+      } else {
+        setError(true)
       }
     })
   }
@@ -87,9 +89,13 @@ const Contact = () => {
   return (
     <ContactSection id='contact'>
       <ContactContainer className='container'>
-        <h2 className='text-2xl messageField'><svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-        </svg> Contact Me</h2>
+        {submitted ? <h2 className='text-2xl text-lime-600'>Thanks! I'll be in contact soon!</h2> :
+          <h2 className='text-2xl messageField'>
+            <svg xmlns="http://www.w3.org/2000/svg" className="contactSVG" fill="none" viewBox="0 0 22 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg> Contact Me</h2>
+        }
+        {error ? <h2 className="text-2xl text-red-600">Something went wrong!</h2> : ''}
         <form>
           <FormRow className='row100'>
             <FormCol className='col'>
@@ -143,7 +149,7 @@ const Contact = () => {
               <StyledButton
                 input
                 onClick={(e) => { handleSubmit(e) }}
-                // disabled={submitting}
+                disabled={submitting}
                 type='submit'
               >
                 {submitting ? 'Submitting...' : 'Send Message'}
