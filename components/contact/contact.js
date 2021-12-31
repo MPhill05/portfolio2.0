@@ -33,7 +33,6 @@ const Contact = () => {
       body: JSON.stringify(data)
     }).then((res) => {
       setSubmitting(true)
-      console.log('Response received')
       if (res.status === 200) {
         setName('')
         setEmail('')
