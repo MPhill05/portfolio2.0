@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const IntroSection = styled.div`
   padding-top: 30vh;
   width: 60vw;
-  height: 90vh;
+  height: 90%;
   position: relative;
   margin: auto;
 
@@ -32,13 +32,8 @@ export const LeftContent = styled.div`
   margin-top: 20vh;
   float: left;
   width: 40vw;
-  
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
 
- .contactSVG {
+  .contactSVG {
     transform: rotate(45deg);
   }
 
@@ -90,8 +85,10 @@ export const TextCursor = styled.div`
 `;
 
 export const RightContent = styled.div`
-  margin-top: 10vh;
+  margin-top: 15vh;
   grid-area: col2;
+  height: 80%;
+  width: 30vw;
 
   @media screen and (max-width: 768px) {
     margin-top: 0;

@@ -32,12 +32,12 @@ const Intro = () => {
           />
         </RightContent>
         <LeftContent>
-          <h1>Mark Phillips</h1>
+          <h1 className='font-bold text-2xl sm:text-5xl'>Mark Phillips</h1>
           <Typing><SoftDevText className='text-gray-400'>Software Developer</SoftDevText><TextCursor /></Typing>
           <br />
           { }
           <a href='/#contact'>
-            <StyledButton>
+            <StyledButton className='text-2xl'>
               Contact Me&nbsp;
               <svg
                 xmlns="http://www.w3.org/2000/svg"
