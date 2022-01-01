@@ -180,7 +180,7 @@ const Projects = () => {
                         <img className='backgroundImage' src={project.img} />
                       </div>
                       <div className="card-content">
-                        <h2 className='card-title'>{project.projectName}</h2>
+                        <h2 className='card-title text-lg md:text-4xl'>{project.projectName}</h2>
                         <p className='card-body'>{project.projectType}</p>
                         <StyledButton onClick={() => openModal(getData(project.projectName, project.projectType, project.techStack, project.challenge, project.solution, project.outcome, project.modalImg, project.viewCode, project.viewSite))} className='projectBtn'>View More&nbsp;
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
