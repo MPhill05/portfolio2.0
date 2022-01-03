@@ -172,7 +172,6 @@ const MobileNav = (props) => {
               smooth={true}
               duration={500}
               exact='true'
-              offset={-80}
               spy={true}
             >
               <p className='font-bold -ml-4 text-xl'>
