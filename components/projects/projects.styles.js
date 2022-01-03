@@ -4,6 +4,10 @@ export const ProjectSection = styled.div`
   min-height: 80vh;
   width: 80%;
   margin: auto;
+
+  @media screen and (max-width: 767px) {
+    width: 90%;
+  }
 `;
 
 export const NumberSlider = styled.div`
@@ -27,7 +31,7 @@ export const NumberSlider = styled.div`
   }
 
   .card-content {
-    --padding: 5rem;
+    --padding: 2rem;
     padding: var(--padding);
     background: linear-gradient(
       hsl(0 0% 0% / 0),
@@ -97,7 +101,6 @@ export const NumberSlider = styled.div`
 
   .card-body {
     color: rgb(255 255 255 / 0.5);
-    font-size: 30px;
     padding-top: 2rem;
   }
 
@@ -109,9 +112,7 @@ export const NumberSlider = styled.div`
 
 export const NavigationWrapper = styled.div`
   position: relative;
-  width: 70vw;
-  margin: auto;
-  padding-bottom: 2em;
+  width: 80vw;
 
   .arrow {
     width: 30px;
@@ -129,7 +130,6 @@ export const NavigationWrapper = styled.div`
   }
 
   .arrow--right {
-    left: auto;
     right: 5px;
   }
 
