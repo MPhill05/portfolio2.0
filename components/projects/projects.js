@@ -182,7 +182,7 @@ const Projects = () => {
                       <div className="card-content">
                         <h2 className='card-title text-lg md:text-4xl'>{project.projectName}</h2>
                         <p className='card-body text-sm md:text-xl'>{project.projectType}</p>
-                        <StyledButton onClick={() => openModal(getData(project.projectName, project.projectType, project.techStack, project.challenge, project.solution, project.outcome, project.modalImg, project.viewCode, project.viewSite))} className='projectBtn text-xs md:text-xl'>View More&nbsp;
+                        <StyledButton onClick={() => openModal(getData(project.projectName, project.projectType, project.techStack, project.challenge, project.solution, project.outcome, project.modalImg, project.viewCode, project.viewSite))} className='projectBtn text-sm md:text-base'>View More&nbsp;
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>

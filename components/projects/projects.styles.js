@@ -31,7 +31,7 @@ export const NumberSlider = styled.div`
   }
 
   .card-content {
-    --padding: 2rem;
+    --padding: 3rem;
     padding: var(--padding);
     background: linear-gradient(
       hsl(0 0% 0% / 0),
