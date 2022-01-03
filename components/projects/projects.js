@@ -120,14 +120,14 @@ const Projects = () => {
                         src={tempData[7]}
                         className='rounded-tr-md rounded-tl-md h-54 w-full lg:h-auto lg:w-3/6 lg:rounded-bl-md lg:rounded-tr-none pt-5 lg:pt-0'
                       />
-                      <div className='p-8 rounded-bl-md rounded-br-md text-white text-center lg:pt-0 lg:mx-auto'>
+                      <div className='p-3 lg:p-8 rounded-bl-md rounded-br-md text-white text-center lg:pt-0 lg:mx-auto'>
                         <h1 className='text-3xl'>{tempData[1]}</h1>
                         <h4 className='font-semibold text-xl mt-5'>{tempData[2]}</h4>
                         <h6 className='font-semibold text-lg my-5'>{tempData[3]}</h6>
-                        <div className='h-40 overflow-y-scroll px-4'>
-                          <p className='text-left my-5'>{tempData[4]}</p>
-                          <p className='text-left my-5'>{tempData[5]}</p>
-                          <p className='text-left my-5'>{tempData[6]}</p>
+                        <div className='h-40 overflow-y-scroll px-0 lg:px-4'>
+                          <p className='text-left my-5 pr-1'>{tempData[4]}</p>
+                          <p className='text-left my-5 pr-1'>{tempData[5]}</p>
+                          <p className='text-left my-5 pr-1'>{tempData[6]}</p>
                         </div>
                         <div className='mt-10 content-evenly'>
                           <a
@@ -136,7 +136,7 @@ const Projects = () => {
                             rel='noopener noreferrer'
                           >
                             <StyledButton
-                              className='mr-5 disabled:cursor-not-allowed'
+                              className='mr-0 sm:mr-10 mb-2 sm:mt-0 disabled:cursor-not-allowed'
                               disabled={tempData[8] === ''}
                             >
                               View Code
@@ -147,7 +147,7 @@ const Projects = () => {
                             target='_blank'
                             rel='noopener noreferrer'
                           >
-                            <StyledButton className='ml-5'>
+                            <StyledButton className='ml-0 sm:ml-10 mt-2 sm:mt-0'>
                               View Site
                             </StyledButton>
                           </a>
@@ -163,11 +163,11 @@ const Projects = () => {
       <ProjectSection id='projects'>
         <section className='bg-white dark:bg-gray-800 z-50'>
           <div className='max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800'>
-            <h1 className='text-5xl md:text-9xl font-bold py-20 text-center md:text-right'>
+            <h1 className='text-6xl md:text-9xl font-bold py-32 md:py-20 text-center md:text-right'>
               Projects
             </h1>
           </div>
-          <NavigationWrapper className="navigation-wrapper flex">
+          <NavigationWrapper className="navigation-wrapper">
             <KeenSlider ref={sliderRef} className="keen-slider">
               {myProjects.projects.map((project, idx) => {
                 return (
@@ -175,14 +175,14 @@ const Projects = () => {
                     key={idx}
                     className={"keen-slider__slide"}
                   >
-                    <div className='rounded-lg shadow-2xl w-4/5 lg:w-1/2 card'>
+                    <div className='rounded-lg shadow-2xl w-8/12 lg:w-1/2 card'>
                       <div className='max-w-40 max-h-30 m-auto'>
                         <img className='backgroundImage' src={project.img} />
                       </div>
                       <div className="card-content">
                         <h2 className='card-title text-lg md:text-4xl'>{project.projectName}</h2>
-                        <p className='card-body'>{project.projectType}</p>
-                        <StyledButton onClick={() => openModal(getData(project.projectName, project.projectType, project.techStack, project.challenge, project.solution, project.outcome, project.modalImg, project.viewCode, project.viewSite))} className='projectBtn'>View More&nbsp;
+                        <p className='card-body text-sm md:text-xl'>{project.projectType}</p>
+                        <StyledButton onClick={() => openModal(getData(project.projectName, project.projectType, project.techStack, project.challenge, project.solution, project.outcome, project.modalImg, project.viewCode, project.viewSite))} className='projectBtn text-xs md:text-xl'>View More&nbsp;
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
