@@ -31,6 +31,34 @@ const MobileNavMenu = ({ isOpen, toggleMenu }) => {
         }}
       >
         <NavLinks
+          to='topHome'
+          className='navItem'
+          smooth={true}
+          duration={500}
+          exact='true'
+          offset={-80}
+          spy={true}
+        >
+          <p className='font-bold -ml-4 text-xl'>
+            Home
+          </p>
+        </NavLinks>
+      </NavLink>
+      <NavLink
+        initial={false}
+        animate={isOpen ? 'show' : 'hide'}
+        variants={{
+          show: {
+            ...variants.show,
+            transition: { delay: 0.4, duration: 0.2 },
+          },
+          hide: {
+            ...variants.hide,
+            transition: { delay: 0.1, duration: 0.05 },
+          },
+        }}
+      >
+        <NavLinks
           to='about'
           className='navItem'
           smooth={true}
@@ -50,11 +78,11 @@ const MobileNavMenu = ({ isOpen, toggleMenu }) => {
         variants={{
           show: {
             ...variants.show,
-            transition: { delay: 0.4, duration: 0.2 },
+            transition: { delay: 0.5, duration: 0.2 },
           },
           hide: {
             ...variants.hide,
-            transition: { delay: 0.1, duration: 0.05 },
+            transition: { delay: 0.15, duration: 0.05 },
           },
         }}
       >
@@ -78,11 +106,11 @@ const MobileNavMenu = ({ isOpen, toggleMenu }) => {
         variants={{
           show: {
             ...variants.show,
-            transition: { delay: 0.5, duration: 0.2 },
+            transition: { delay: 0.6, duration: 0.2 },
           },
           hide: {
             ...variants.hide,
-            transition: { delay: 0.15, duration: 0.05 },
+            transition: { delay: 0.2, duration: 0.05 },
           },
         }}
       >
@@ -106,11 +134,11 @@ const MobileNavMenu = ({ isOpen, toggleMenu }) => {
         variants={{
           show: {
             ...variants.show,
-            transition: { delay: 0.6, duration: 0.2 },
+            transition: { delay: 0.7, duration: 0.2 },
           },
           hide: {
             ...variants.hide,
-            transition: { delay: 0.2, duration: 0.05 },
+            transition: { delay: 0.25, duration: 0.05 },
           },
         }}
       >
@@ -125,7 +153,7 @@ const MobileNavMenu = ({ isOpen, toggleMenu }) => {
           </p>
         </Link>
       </NavLink>
-    </NavMenuContainer >
+    </NavMenuContainer>
   )
 }
 

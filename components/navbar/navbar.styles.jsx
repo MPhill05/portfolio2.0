@@ -67,10 +67,6 @@ export const NavLogo = styled.p`
   -o-transition: all 1s ease-out;
   -ms-transition: all 1s ease-out;
   transition: all 1s ease-out;
-
-  &:hover {
-    color: #00ff00;
-  }
 `;
 
 export const NavContainer = styled.div`
