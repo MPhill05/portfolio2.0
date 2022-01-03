@@ -14,12 +14,10 @@ import {
 } from "./projects.styles";
 
 import myProjects from '../../data/projectData';
-import Link from "next/link";
 
 const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
-  // const [slides, setSlides] = useState([1])
   const numberSlides = myProjects.projects.length;
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
@@ -104,15 +102,15 @@ const Projects = () => {
                 </span>
                 <Transition.Child
                   as={Fragment}
-                  enter="ease-out duration-300"
+                  enter="ease-out duration-500"
                   enterFrom="opacity-0 scale-95"
-                  enterTo="opacity-100 scale-100"
+                  enterTo="opacity-0 scale-100"
                   leave="ease-in duration-200"
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
                   <div className="inline-block w-full max-w-7xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-gray-900 shadow-md shadow-lime-500 rounded-2xl">
-                    <button onClick={closeModal} className=' cursor-pointer absolute right-5'>
+                    <button onClick={closeModal} className='cursor-pointer absolute right-5'>
                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" /></svg>
                     </button>
                     <div className="mt-2 lg:flex lg:flex-row lg:h-auto">
