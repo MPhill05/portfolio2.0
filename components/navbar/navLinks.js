@@ -11,7 +11,7 @@ const NavLink = () => {
               to='about'
               className='navItem'
               smooth={true}
-              duration={500}
+              duration={1000}
               exact='true'
               offset={-80}
               spy={true}
@@ -22,7 +22,7 @@ const NavLink = () => {
               to='projects'
               className='navItem'
               smooth={true}
-              duration={500}
+              duration={1000}
               exact='true'
               offset={-80}
               spy={true}
@@ -33,7 +33,7 @@ const NavLink = () => {
               to='contact'
               className='navItem'
               smooth={true}
-              duration={500}
+              duration={1000}
               exact='true'
               offset={-80}
               spy={true}

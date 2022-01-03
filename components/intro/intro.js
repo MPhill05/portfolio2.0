@@ -5,6 +5,7 @@ import {
   IntroSection,
   LeftContent,
   RightContent,
+  Scroller,
   SoftDevText,
   TextCursor,
   Typing
@@ -36,7 +37,14 @@ const Intro = () => {
           <Typing><SoftDevText className='text-gray-400'>Software Developer</SoftDevText><TextCursor /></Typing>
           <br />
           { }
-          <a href='/#contact'>
+          <Scroller
+            to='contact'
+            smooth={true}
+            duration={1000}
+            exact='true'
+            offset={-80}
+            spy={true}
+          >
             <StyledButton className='text-sm md:text-base'>
               Contact Me&nbsp;
               <svg
@@ -48,7 +56,7 @@ const Intro = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
             </StyledButton>
-          </a>
+          </Scroller>
         </LeftContent>
       </IntroContainer>
     </IntroSection >

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkScroll } from 'react-scroll';
 
 export const IntroSection = styled.div`
   padding-top: 30vh;
@@ -82,6 +83,10 @@ export const TextCursor = styled.div`
     from {border-bottom-color: rgba(57, 255, 20, 1);}
     to {border-bottom-color: transparent;}
   }
+`;
+
+export const Scroller = styled(LinkScroll)`
+
 `;
 
 export const RightContent = styled.div`

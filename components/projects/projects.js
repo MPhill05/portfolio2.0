@@ -124,7 +124,7 @@ const Projects = () => {
                         <h1 className='text-3xl'>{tempData[1]}</h1>
                         <h4 className='font-semibold text-xl mt-5'>{tempData[2]}</h4>
                         <h6 className='font-semibold text-lg my-5'>{tempData[3]}</h6>
-                        <div className='h-40 overflow-y-scroll px-0 lg:px-4'>
+                        <div className='h-40 overflow-y-scroll overflow-visible px-0 lg:px-4'>
                           <p className='text-left my-5 pr-1'>{tempData[4]}</p>
                           <p className='text-left my-5 pr-1'>{tempData[5]}</p>
                           <p className='text-left my-5 pr-1'>{tempData[6]}</p>
