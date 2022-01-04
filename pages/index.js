@@ -13,6 +13,7 @@ export default function Home() {
       description="This portfolio website was built to showcase previous projects and host my blog."
     >
       <Intro />
+
       <About />
       <Projects />
       <Contact />

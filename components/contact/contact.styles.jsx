@@ -37,7 +37,7 @@ export const ContactContainer = styled.div`
     transform: skewX(-15deg);
   }
 
-  h2 {
+  h2, h4 {
     text-align: center;
   }
 
