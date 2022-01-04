@@ -6,8 +6,9 @@
 
 The website is built with the following Tech Stack
 
-- [Next.js](https://nextjs.org) for building React Components.
-- [tailwindcss](https://tailwindcss.com) and [styled-components](https://styled-components.com/) for styling.
+- [Next.js](https://nextjs.org) for building [React](https://reactjs.org/) Components.
+- [Tailwindcss](https://tailwindcss.com) and [styled-components](https://styled-components.com/) for styling.
+- [GraphQL](https://graphql.org/) for the blog data.
 
 - Install all the modules using `npm i` or `yarn`
 - Run the local development server by using `npm run dev` or `yarn dev`
