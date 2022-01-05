@@ -175,7 +175,7 @@ const Projects = () => {
                   >
                     <div className='rounded-lg shadow-2xl w-8/12 lg:w-1/2 card'>
                       <div className='max-w-40 max-h-30 m-auto'>
-                        <img className='backgroundImage' src={project.img} />
+                        <img className='backgroundImage h-8 md:h-20' src={project.img} />
                       </div>
                       <div className="card-content">
                         <h2 className='card-title text-lg md:text-4xl'>{project.projectName}</h2>
