@@ -25,7 +25,7 @@ export default (req, res) => {
     to: 'mphill05@gmail.com',
     subject: `New mail from ${name}`,
     text: message + " | Sent from: " + email,
-    html: `<div>Sent from: ${email}</div><p>${message}</p>`
+    html: `<div>Name: ${name}</div><div>Sent from: ${email}</div><p>Message: ${message}</p>`
   }
 
   transporter.sendMail(mailData, (err, data) => {
