@@ -15,38 +15,45 @@ const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    let data = {
-      name,
-      email,
-      message
-    }
-
-    fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }).then((res) => {
-      setSubmitting(true)
-      if (res.status === 200) {
-        console.log('Response succeeded! ' + res.status)
-        const timer = setTimeout(() => {
-          setName('')
-          setEmail('')
-          setMessage('')
-          setSubmitted(true)
-          setSubmitting(false)
-        }, 3000);
-        return () => clearTimeout(timer);
-      } else {
-        setError(true)
+    if (name && email && message) {
+      let data = {
+        name,
+        email,
+        message
       }
-    })
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then((res) => {
+        setSubmitting(true)
+        if (res.status === 200) {
+          const timer = setTimeout(() => {
+            setName('')
+            setEmail('')
+            setMessage('')
+            setSubmitted(true)
+            setSubmitting(false)
+            setError(false)
+          }, 3000);
+          return () => clearTimeout(timer);
+        } else {
+          setError(true)
+        }
+      })
+    } else {
+      setSubmitted(false)
+      setError(true)
+    }
   }
 
   return (
@@ -115,7 +122,7 @@ const Contact = () => {
               <StyledButton
                 input
                 onClick={(e) => { handleSubmit(e) }}
-                // disabled={submitting}
+                disabled={submitting}
                 type='submit'
               >
                 {submitting ? 'Submitting...' : 'Send Message'}
