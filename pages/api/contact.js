@@ -33,7 +33,6 @@ export default (req, res) => {
       console.log(err);
       res.send('error ' + JSON.stringify(err));
     } else {
-      console.log('email sent ' + data);
       res.send('success');
     }
   })

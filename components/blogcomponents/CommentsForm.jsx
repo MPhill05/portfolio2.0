@@ -88,6 +88,7 @@ const CommentsForm = ({ slug }) => {
       <div className='mt-8'>
         <StyledButton
           type='button'
+          className='m-auto sm:m-0 md:mb-0 px-8 py-2 text-sm md:text-base flex flex-row items-center'
           onClick={handleCommentSubmission}
         >
           Post Comment
