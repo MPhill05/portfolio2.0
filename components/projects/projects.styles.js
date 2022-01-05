@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectSection = styled.div`
-  min-height: 80vh;
+  min-height: 70vh;
   width: 80%;
   margin: auto;
 

@@ -1,21 +1,22 @@
 export const myProjects = {
   projects: [
     {
-      id: 4,
+      id: 5,
       projectName: 'BlkGold',
       projectType: 'React Web App',
       img: '/static/bgLogo.webp',
       alt: 'BlkGold',
       modalImg: '/static/blkGoldSiteImg.webp',
       techStack: 'ReactJS | Sass | Bootstrap | CircleCi | AWS ',
-      challenge: `Challenge: Outside of coding I enjoy creating music for fun, and wanted a centralized location for fans to find my music. `,
-      solution: 'Solution: Blkgoldmusic.com is a simple web application that allows users to quickly find my music, videos, and any related information to the project. It shows fans my most recent releases on the home page along with all applicable social media links, and a contact form to stay up to date with me via email. The responsive web app was built with Sass and Bootstrap for a smooth responsive design, complete with some simple React routing and modals to easily show applicable information.',
+      challenge: `Challenge: Outside of coding I enjoy creating music for fun, and wanted a centralized location for fans to find my music.`,
+      solution: 'Solution: Blkgoldmusic.com is a simple web application that allows users to quickly find my music, videos, and any related information to the project. It shows fans my most recent releases on the home page along with all applicable social media links, and a contact form to stay up to date with the project via email. The responsive web app was built with Sass and Bootstrap for a smooth responsive design, complete with some simple React routing and modals to easily show applicable information.',
       outcome: 'Outcome: The site is a simple responsive React application with a clean and quick UI. Through designing, developing and deploying this modern, yet simple application, my overall followers increased by around 100 users across all social platforms and has given me a way to access fans of my music directly.',
       viewCode: 'https://github.com/MPhill05/BlkGold-Webapp',
       viewSite: 'https://blkgoldmusic.com/'
     },
+
     {
-      id: 3,
+      id: 4,
       projectName: 'Phillstack',
       projectType: 'React Web App',
       img: '/static/psLogoBlack.webp',
@@ -29,7 +30,7 @@ export const myProjects = {
       viewSite: 'https://phillstack.com/'
     },
     {
-      id: 2,
+      id: 3,
       projectName: 'Boombox Cartel',
       projectType: 'Angular Web App',
       img: '/static/bmbxCtrlLogo.webp',
@@ -43,7 +44,7 @@ export const myProjects = {
       viewSite: 'http://boomboxcartel.com/'
     },
     {
-      id: 1,
+      id: 2,
       projectName: 'Shop J\&W',
       projectType: 'E-Commerce Website',
       img: '/static/shopJWLogo.webp',
@@ -55,7 +56,21 @@ export const myProjects = {
       outcome: 'Outcome: The sites redesign has improved usability and the migration to Bigcommerce has improved stability by over 50%.',
       viewCode: '',
       viewSite: 'https://shopjandw.com/'
-    }
+    },
+    {
+      id: 1,
+      projectName: 'Portfolio',
+      projectType: 'Next JS Web App',
+      img: '/static/MPImg.webp',
+      alt: 'BlkGold',
+      modalImg: '/static/portfolioImg.webp',
+      techStack: 'NextJS | ReactJS | Sass | Tailwind CSS | GraphQL | NodeJS',
+      challenge: `Challenge: I needed an updated web portfolio to showcase my previous projects, and I wanted to building a project with NextJS. I needed something that felt modern but was easy to navigate, responsive, fast in terms of load times, and included a blog as I've been interested in building one for some time.`,
+      solution: 'Solution: I decided to take on the project with NextJS as it allows me to code some things with React and I was already familiar. Next also comes with the back end somewhat built in, so I knew creating the blog should be fairly straight forward. While I ran into some odd hiccups compared to React (just with how data is handled at times, and learning to use the built in routing system) the end result is this snappy and responsive web app.',
+      outcome: `Outcome: You're looking at it! This site is responsive, has some simple functionality and animations, a blog that runs from GraphCMS via GraphQL and is fully responsive for every device with Tailwind and some styled-components.`,
+      viewCode: 'https://github.com/mphill05/portfolio2.0',
+      viewSite: 'https://markphillips.vercel.app'
+    },
   ]
 };
 
