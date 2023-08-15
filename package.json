@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
+    "@sendgrid/mail": "^7.7.0",
+    "@vercel/node": "^2.15.10",
     "dotenv": "^10.0.0",
     "framer-motion": "^5.5.5",
     "googleapis": "^92.0.0",
@@ -18,7 +20,6 @@
     "next": "latest",
     "next-images": "^1.8.4",
     "next-themes": "^0.0.15",
-    "nodemailer": "^6.7.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -35,5 +36,8 @@
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.7"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }

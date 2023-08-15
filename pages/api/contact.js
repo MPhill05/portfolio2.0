@@ -1,39 +1,22 @@
-require('dotenv').config();
-const nodemailer = require('nodemailer')
+const sendgridMail = require('@sendgrid/mail');
 
-export default (req, res) => {
-
+export default async (req, res) => {
   const { name, email, message } = req.body;
 
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      type: 'OAuth2',
-      user: 'portfolioacctemail@gmail.com',
-      clientId: process.env.CLIENTID,
-      clientSecret: process.env.CLIENTSECRET,
-      refreshToken: process.env.REFRESHTOKEN,
-      accessToken: process.env.ACCESSTOKEN,
-      redirectUri: process.env.REDIRECTURI,
-    }
-  });
+  sendgridMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-  const mailData = {
-    from: 'portfolioacctemail@gmail.com',
+  const msg = {
     to: 'mphill05@gmail.com',
-    subject: `New mail from ${name}`,
-    text: message + " | Sent from: " + email,
-    html: `<div>Name: ${name}</div><div>Sent from: ${email}</div><p>Message: ${message}</p>`
-  }
+    from: 'portfolioacctemail@gmail.com',
+    subject: `New mail from portfolio site from ${name}`,
+    text: `Message from ${email}: ${message}`,
+  };
 
-  transporter.sendMail(mailData, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.send('error ' + JSON.stringify(err));
-    } else {
-      res.send('success');
-    }
-  })
-}
+  try {
+    await sendgridMail.send(msg);
+    res.status(200).send('Email sent successfully');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error sending email')
+  }
+};
