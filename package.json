@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
+    "@sendgrid/mail": "^7.7.0",
     "dotenv": "^10.0.0",
     "framer-motion": "^5.5.5",
     "googleapis": "^92.0.0",
