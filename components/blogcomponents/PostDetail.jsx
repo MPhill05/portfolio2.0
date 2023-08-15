@@ -7,19 +7,28 @@ const PostDetail = ({ post }) => {
 
     if (obj) {
       if (obj.bold) {
-        modifiedText = (<b key={index}>{text}</b>);
+        modifiedText = <b key={index}>{modifiedText}</b>;
       }
 
       if (obj.italic) {
-        modifiedText = (<em key={index}>{text}</em>);
+        modifiedText = <em key={index}>{modifiedText}</em>;
       }
 
       if (obj.underline) {
-        modifiedText = (<u key={index}>{text}</u>);
+        modifiedText = <u key={index}>{modifiedText}</u>;
+      }
+      if (obj.hyperlink) {
+        modifiedText = <a key={`a-${index}`} href={obj.hyperlink} target='_blank' rel='noopener noreferrer'>{modifiedText}</a>;
       }
     }
 
     switch (type) {
+      case 'code-snippet':
+        return <pre key={index} className='bg-gray-800 p-4 rounded'><code>{modifiedText}</code></pre>;
+      case 'bulleted-list':
+        return <ul key={index} className='list-disc pl-5'>{modifiedText.map((item, i) => <li key={i}>{item}</li>)}</ul>;
+      case 'indented-text':
+        return <div key={index} className='pl-5'>{modifiedText}</div>;
       case 'heading-three':
         return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
