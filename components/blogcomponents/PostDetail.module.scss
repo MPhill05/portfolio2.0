@@ -1,0 +1,52 @@
+.rich-text {
+  p {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin: 1.5rem 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  ul,
+  ol {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  pre {
+    padding: 1rem;
+    background-color: #1e1e1e;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  code {
+    color: #d4d4d4;
+    font-family: 'Courier New', monospace;
+  }
+
+  a {
+    color: #0077b6;
+    text-decoration: underline;
+  }
+}

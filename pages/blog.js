@@ -39,7 +39,7 @@ export default function blog({ posts }) {
         <FeaturedPosts />
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className='lg:col-span-8 col-span-1'>
-            {posts.map((post, index) => <PostCard post={post.node} key={post.title} />)}
+            {posts.map((post, index) => <PostCard post={post.node} key={post.node.id} />)}
           </div>
           <div className='lg:col-span-4 col-span-1'>
             <div className='lg:sticky relative top-8'>
@@ -55,7 +55,8 @@ export default function blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
+  let posts = (await getPosts()) || [];
+  posts = posts.sort((a, b) => new Date(b.node.createdAt) - new Date(a.node.createdAt));
 
   return {
     props: { posts }

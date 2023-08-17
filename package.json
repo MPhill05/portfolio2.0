@@ -6,9 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@headlessui/react": "^1.4.2",
     "@sendgrid/mail": "^7.7.0",
     "@vercel/node": "^2.15.10",
+    "copy-to-clipboard": "^3.3.3",
     "dotenv": "^10.0.0",
     "framer-motion": "^5.5.5",
     "googleapis": "^92.0.0",

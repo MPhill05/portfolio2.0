@@ -10,8 +10,10 @@ const PostWidget = ({ categories, slug }) => {
   useEffect(() => {
     if (slug) {
       getSimilarPosts(categories, slug)
-        .then((result) => result.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()));
-      setRelatedPosts(result);
+        .then((result) => {
+          const sortedPosts = result.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+          setRelatedPosts(sortedPosts);
+        })
     } else {
       getRecentPosts()
         .then((result) => {
