@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import moment from 'moment';
 import CodeBlock from '../CodeBlock';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import styles from './PostDetail.module.scss';
 
 const PostDetail = ({ post }) => {
+  const richTextRef = useRef(null);
+
+  useEffect(() => {
+    if (richTextRef.current) {
+      const links = richTextRef.current.querySelectorAll('a');
+      links.forEach(link => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+    }
+  }, [post]);
+
 
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
@@ -86,7 +98,9 @@ const PostDetail = ({ post }) => {
         </div>
         <h1 className='mb-8 text-3xl font-semibold'>{post.title}</h1>
         <div className={styles['rich-text']}>
-          <RichText content={post.content.raw} />
+          <div className={styles['rich-text']} ref={richTextRef}>
+            <RichText content={post.content.raw} />
+          </div>
         </div>
       </div>
     </div>
