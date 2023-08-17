@@ -1,7 +1,11 @@
 import React from 'react';
 import moment from 'moment';
+import CodeBlock from '../CodeBlock';
+import { RichText } from '@graphcms/rich-text-react-renderer';
+import styles from './PostDetail.module.scss';
 
 const PostDetail = ({ post }) => {
+
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
 
@@ -24,7 +28,7 @@ const PostDetail = ({ post }) => {
 
     switch (type) {
       case 'code-snippet':
-        return <pre key={index} className='bg-gray-800 p-4 rounded'><code>{modifiedText}</code></pre>;
+        return <CodeBlock key={index}>{modifiedText}</CodeBlock>
       case 'bulleted-list':
         return <ul key={index} className='list-disc pl-5'>{modifiedText.map((item, i) => <li key={i}>{item}</li>)}</ul>;
       case 'indented-text':
@@ -81,11 +85,9 @@ const PostDetail = ({ post }) => {
           </div>
         </div>
         <h1 className='mb-8 text-3xl font-semibold'>{post.title}</h1>
-        {post.content.raw.children.map((typeObj, index) => {
-          const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
-
-          return getContentFragment(index, children, typeObj, typeObj.type)
-        })}
+        <div className={styles['rich-text']}>
+          <RichText content={post.content.raw} />
+        </div>
       </div>
     </div>
   )
