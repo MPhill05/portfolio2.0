@@ -28,6 +28,7 @@ export const NumberSlider = styled.div`
     margin: auto;
     position: relative;
     background-size: cover;
+    object-fit: contain;
   }
 
   .card-content {
