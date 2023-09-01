@@ -116,7 +116,7 @@ const Projects = () => {
                     <div className="mt-2 lg:flex lg:flex-row lg:h-auto">
                       <img
                         src={tempData[7]}
-                        className='rounded-tr-md rounded-tl-md h-54 w-full lg:h-auto lg:w-3/6 lg:rounded-bl-md lg:rounded-tr-none pt-5 lg:pt-0'
+                        className='rounded-tr-md rounded-tl-md h-54 w-full object-contain lg:h-auto lg:w-3/6 lg:rounded-bl-md lg:rounded-tr-none pt-5 lg:pt-0'
                       />
                       <div className='p-3 lg:p-8 rounded-bl-md rounded-br-md text-white text-center lg:pt-0 lg:mx-auto'>
                         <h1 className='text-3xl'>{tempData[1]}</h1>
