@@ -25,7 +25,7 @@ const About = () => {
             I have experience working as a freelance developer, working directly with customers to create web applications with over 10,000 active users and consistently delivering quality work.
           </p>
           <a
-            href='https://drive.google.com/file/d/1L9py-RExuhFtp7qToWBLQbAOyQekx91I/view?usp=sharing'
+            href='https://drive.google.com/file/d/1L9py-RExuhFtp7qToWBLQbAOyQekx91I/view?usp=share_link'
             target='_blank'
           >
             <StyledButton
